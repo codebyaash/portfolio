@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aashritha N developer portfolio">
+    <title>Aashritha N | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo">Aashritha N</h1>
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav id="navMenu" class="nav-menu" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="themeToggle" class="theme-button">
+                    Dark Mode
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div>
+                    <p class="intro">Hello, I'm</p>
+                    <h2>Aashritha N</h2>
+                    <h3>Software Developer</h3>
+
+                    <p>
+                        I enjoy building practical applications using C#, .NET,
+                        cloud technologies, and modern web development tools.
+                    </p>
+
+                    <a href="#projects" class="button">View My Projects</a>
+                </div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                    alt="Laptop displaying software development code"
+                    class="hero-image"
+                >
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+
+                <p>
+                    I am a software developer with experience in backend
+                    development, cloud technologies, APIs, databases, and
+                    infrastructure automation. I enjoy learning new technologies
+                    and building applications that solve real problems.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section alternate">
+            <div class="container">
+                <h2>Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Backend</h3>
+                        <p>C#, .NET, ASP.NET Core, REST APIs</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Cloud</h3>
+                        <p>Microsoft Azure, Azure Functions, Cloud Computing</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>DevOps</h3>
+                        <p>Git, GitHub, Azure DevOps, CI/CD, Docker</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Database</h3>
+                        <p>SQL Server, PostgreSQL, MySQL</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>AI</h3>
+                        <p>Generative AI, Prompt Engineering, AI Applications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>AI CloudOps Assistant</h3>
+                        <p>
+                            A cloud operations platform designed to monitor
+                            infrastructure, analyze incidents, and provide
+                            AI-assisted troubleshooting.
+                        </p>
+                        <span>C# / Azure / APIs / AI</span>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Infrastructure Deployment Platform</h3>
+                        <p>
+                            A platform for managing infrastructure templates,
+                            deployments, deployment history, and cloud automation.
+                        </p>
+                        <span>Azure / IaC / DevOps</span>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Expense Tracker</h3>
+                        <p>
+                            A simple web application for recording and reviewing
+                            expenses with local data storage and summaries.
+                        </p>
+                        <span>HTML / CSS / JavaScript</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section alternate">
+            <div class="container contact-section">
+                <h2>Contact</h2>
+
+                <p>
+                    Interested in connecting or discussing a project?
+                </p>
+
+                <button id="contactButton" class="button">
+                    Show Contact Message
+                </button>
+
+                <p id="contactMessage" class="contact-message" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Aashritha N. Built with HTML, CSS and JavaScript.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
