@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="WealthCompass case study: a local-first investment companion designed and built by Aashritha N.">
+<meta property="og:type" content="article"><meta property="og:title" content="WealthCompass — Full-Stack Fintech Case Study"><meta property="og:description" content="Risk profiling, portfolio health, goal planning, financial education and optional cloud synchronization."><meta property="og:url" content="https://codebyaash.github.io/portfolio/wealthcompass.html"><meta property="og:image" content="https://codebyaash.github.io/portfolio/assets/social/aashritha-portfolio-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<title>WealthCompass Case Study &mdash; Aashritha N</title>
+<link rel="canonical" href="https://codebyaash.github.io/portfolio/wealthcompass.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#171729">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="architecture.css">
+<link rel="stylesheet" href="audit-fixes.css">
+</head>
+<body>
+<nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
+<a href="cloudops.html">CloudOps</a><a href="deployforge.html">DeployForge</a><a href="https://github.com/codebyaash/WealthCompass">GitHub &#8599;</a>
+</div></nav><main><header class="case-hero"><div class="case-kicker">Fintech + product engineering &middot; Case study 03</div>
+<h1>WealthCompass</h1>
+<p>A free-first investment companion making risk, portfolios, financial goals and market context understandable for beginner investors.</p>
+<div class="case-actions"><a class="primary" href="https://github.com/codebyaash/WealthCompass">View source &#8599;</a></div></header><div class="case-metrics">
+<div>
+<strong>36</strong><span>Phases</span>
+</div>
+<div>
+<strong>6+</strong><span>User workflows</span>
+</div>
+<div>
+<strong>Local</strong><span>Offline-safe</span>
+</div>
+<div>
+<strong>CI</strong><span>Quality gate</span>
+</div>
+</div>
+<div class="case-body">
+<section class="case-section"><h2>The problem</h2>
+<div><p>Most investment tools assume financial fluency. Beginners need explanations, planning support and portfolio feedback without immediately requiring paid data or broker integrations.</p></div></section><section class="case-section"><h2>The solution</h2>
+<div>
+<p>WealthCompass combines onboarding, risk profiling, education, portfolio tracking, multi-goal planning, market context and mentor guidance in a local-first workspace.</p>
+<pre class="flow">Profile &rarr; Risk score &rarr; Learning &rarr; Portfolio &rarr; Health rules &rarr; Goals &rarr; Market context &rarr; Mentor &rarr; Cloud sync</pre>
+</div></section><section class="case-section"><h2>Architecture</h2>
+<div class="decision-grid"><figure class="architecture-frame"><img src="assets/projects/wealthcompass-architecture.svg" alt="WealthCompass architecture showing the Next.js workspace, domain rules, local state, Supabase and optional providers"><figcaption>Local-first product and integration architecture</figcaption></figure>
+<article class="decision"><small>Application</small><h3>Next.js + TypeScript</h3>
+<p>Componentized dashboard workflows and route handlers.</p></article><article class="decision"><small>Data</small><h3>Local-first + Supabase</h3>
+<p>Useful without credentials, with authenticated cloud sync when configured.</p></article><article class="decision"><small>Intelligence</small><h3>Rules before AI</h3>
+<p>Deterministic risk, health and goal engines provide reliable fallbacks.</p></article><article class="decision"><small>Quality</small><h3>Testable domain logic</h3>
+<p>Extracted modules cover scoring, imports, mappings and planning.</p></article>
+</div></section><section class="case-section"><h2>Key decisions</h2>
+<div>
+<h3>Free-first operation</h3>
+<p>Local storage and fallback market data keep the product demonstrable without external accounts.</p>
+<h3>Portable user data</h3>
+<p>CSV and JSON import/export, statement review and transaction history reduce lock-in.</p>
+<h3>Defensive integration</h3>
+<p>Normalized inputs, mapping tests and sync states make external failures visible and recoverable.</p>
+</div></section><section class="case-section"><h2>Quality &amp; scope</h2>
+<div><ul>
+<li>Unit tests for scoring, goal math, import validation and exports</li>
+<li>CI runs install, lint, tests and production build</li>
+<li>Supabase mapping and workspace migration coverage</li>
+<li>Provider-aware statement review and scheduled sync foundation</li>
+</ul></div></section><section class="case-section"><h2>Next iteration</h2>
+<div><ul>
+<li>Add interface screenshots and a public demo</li>
+<li>Expand end-to-end browser coverage</li>
+<li>Validate rules with qualified domain reviewers</li>
+<li>Security-review broker connections before implementation</li>
+</ul></div></section>
+</div></main><footer><span>&copy; Aashritha N</span><a href="index.html#projects">Back to portfolio &uarr;</a></footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI CloudOps Assistant case study: evidence-grounded incident analysis and remediation guidance by Aashritha N.">
+<meta property="og:type" content="article"><meta property="og:title" content="AI CloudOps Assistant — Applied AI Case Study"><meta property="og:description" content="A cloud operations workflow for telemetry ingestion, incident context, root-cause hypotheses and human-reviewed remediation guidance."><meta property="og:url" content="https://codebyaash.github.io/portfolio/cloudops.html"><meta property="og:image" content="https://codebyaash.github.io/portfolio/assets/social/aashritha-portfolio-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<title>AI CloudOps Assistant &mdash; Aashritha N</title>
+<link rel="canonical" href="https://codebyaash.github.io/portfolio/cloudops.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#171729">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="architecture.css">
+<link rel="stylesheet" href="audit-fixes.css">
+</head>
+<body>
+<nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
+<a href="deployforge.html">DeployForge</a><a href="wealthcompass.html">WealthCompass</a><a href="https://github.com/codebyaash">GitHub &#8599;</a>
+</div></nav><main><header class="case-hero"><div class="case-kicker">Cloud operations + applied AI &middot; Case study 01</div>
+<h1>AI CloudOps Assistant</h1>
+<p>An operations workspace bringing logs, incidents, infrastructure health, root-cause analysis and remediation guidance into one workflow.</p></header><div class="case-metrics">
+<div>
+<strong>5</strong><span>Ops workflows</span>
+</div>
+<div>
+<strong>7</strong><span>Technologies</span>
+</div>
+<div>
+<strong>API</strong><span>Authenticated</span>
+</div>
+<div>
+<strong>AI</strong><span>Contextual guidance</span>
+</div>
+</div>
+<div class="case-body">
+<section class="case-section"><h2>The problem</h2>
+<div><p>Cloud incident response is slowed by fragmented telemetry and context switching. Engineers must assemble logs, health signals and operational knowledge before forming a useful hypothesis.</p></div></section><section class="case-section"><h2>The solution</h2>
+<div>
+<p>The platform organizes incident signals behind authenticated APIs, persists operational context, and applies AI to summarize evidence, suggest likely causes and surface remediation guidance.</p>
+<pre class="flow">Telemetry &rarr; Ingestion &rarr; Incident context &rarr; Health correlation &rarr; AI analysis &rarr; Root-cause hypothesis &rarr; Remediation guidance</pre>
+</div></section><section class="case-section"><h2>Architecture</h2>
+<div class="decision-grid"><figure class="architecture-frame"><img src="assets/projects/cloudops-architecture.svg" alt="AI CloudOps architecture showing operational signals, ingestion, APIs, incident context, persistence and AI-assisted analysis"><figcaption>Evidence-to-guidance system architecture</figcaption></figure>
+<article class="decision"><small>Experience</small><h3>Next.js operations UI</h3>
+<p>Incident, monitoring and guided-investigation workflows.</p></article><article class="decision"><small>Services</small><h3>FastAPI boundary</h3>
+<p>Separates ingestion, incidents, analysis and recommendations.</p></article><article class="decision"><small>Persistence</small><h3>PostgreSQL</h3>
+<p>Stores users, operational events and incident context.</p></article><article class="decision"><small>Runtime</small><h3>Docker + Azure</h3>
+<p>Consistent local and cloud service execution.</p></article>
+</div></section><section class="case-section"><h2>Key decisions</h2>
+<div>
+<h3>Ground AI in evidence</h3>
+<p>Recommendations use collected operational context rather than treating the model as a source of truth.</p>
+<h3>Keep workflows separable</h3>
+<p>Ingestion, persistence and analysis boundaries allow models and telemetry sources to change independently.</p>
+<h3>Human in the loop</h3>
+<p>The product supports investigation decisions; it does not imply autonomous production changes.</p>
+</div></section><section class="case-section"><h2>Next iteration</h2>
+<div><ul>
+<li>Add evaluation fixtures for analysis quality</li>
+<li>Measure response latency and retrieval relevance</li>
+<li>Add role-based access and audit events</li>
+<li>Publish interface screenshots and diagrams</li>
+</ul></div></section>
+</div></main><footer><span>&copy; Aashritha N</span><a href="index.html#projects">Back to portfolio &uarr;</a></footer>
+</body>
+</html>

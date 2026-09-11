@@ -1,0 +1,2 @@
+/* Audit fixes: content stays perceivable before JavaScript and while off-screen. */
+section:not(.hero),section:not(.hero) article{opacity:1!important;transform:none!important}.terminal>span,.terminal>footer{color:#98a7a1}.decision small{color:#8f3027;font-weight:600}section:not(.hero) label,.stats small,.project-count,.visual-status small,.project-gallery figcaption,.credential-summary span{color:#4b4a59!important}.skill-grid article>small{color:#4b4a59!important}.visual-status span,.project-depth small{color:#51488e!important}#experience>label{color:#d3ccff!important}
