@@ -11,12 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="polish.css">
+<link rel="stylesheet" href="certifications.css">
+<link rel="stylesheet" href="redesign.css">
+<link rel="stylesheet" href="palette.css">
+<link rel="stylesheet" href="structure.css">
 </head>
 <body>
-<header><a class="logo" href="#top"><b>AN</b> Aashritha N</a><button id="menu" aria-label="Open menu">&#9776;</button><nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#credentials">Credentials</a><a class="pill" href="#contact">Let's talk &#8599;</a></nav></header>
+<header><a class="logo" href="#top"><b>AN</b> Aashritha N</a><button id="menu" aria-label="Open menu" aria-expanded="false">&#9776;</button><nav><a href="#about">About</a><a href="#skills">Expertise</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#credentials">Credentials</a><a class="pill" href="#contact">Let's talk &#8599;</a></nav></header>
 <main><section class="hero" id="top"><div class="reveal">
-<small><i></i> AVAILABLE FOR SENIOR ENGINEERING OPPORTUNITIES</small><h1>Building reliable<br>backend, cloud &amp;<br><em>AI systems</em> that scale.</h1>
+<small><i></i> SENIOR SOFTWARE ENGINEER · BENGALURU, INDIA</small><h1>I build cloud systems<br>that are <em>reliable</em>,<br>repeatable &amp; ready to scale.</h1>
 <p>Senior Software Engineer with 5+ years across backend engineering, Microsoft Azure, Infrastructure as Code, CI/CD, release automation, production support, and enterprise application delivery.</p>
+<div class="hero-socials"><a href="https://github.com/codebyaash" aria-label="GitHub">GH</a><a href="https://www.linkedin.com/in/aashritha-nagesh-333748250" aria-label="LinkedIn">IN</a><a href="mailto:codebyaash@gmail.com" aria-label="Email">@</a></div>
 <div class="actions">
 <a class="primary" href="#projects">Explore my work &darr;</a><a href="resume.pdf" download>Download r&eacute;sum&eacute; &#8599;</a>
 </div>
@@ -40,46 +45,58 @@
 </div>
 </div>
 </div></section>
-<section class="dark" id="experience"><label>02 / EXPERIENCE</label><div class="cols">
+<section id="skills" class="skills-section"><label>02 / EXPERTISE</label><div class="section-intro"><h2>From commit to cloud,<br>I own the whole path.</h2><p>I combine backend depth with delivery and operations thinking—building software that is maintainable in code, predictable in deployment, and diagnosable in production.</p></div><div class="skill-grid">
+<article><small>01</small><h3>Cloud &amp; Azure</h3><p>Azure Functions, API Management, Logic Apps, Service Bus, Event Grid, Key Vault, Azure Monitor</p></article>
+<article><small>02</small><h3>DevOps &amp; CI/CD</h3><p>Azure DevOps, GitHub Actions, YAML pipelines, build and release automation, Git</p></article>
+<article><small>03</small><h3>Infrastructure as Code</h3><p>Bicep, ARM Templates, Terraform and Azure CLI for repeatable, version-controlled provisioning</p></article>
+<article><small>04</small><h3>Backend Engineering</h3><p>C#, .NET, ASP.NET Core, REST APIs, microservices, JWT authentication and integrations</p></article>
+<article><small>05</small><h3>Automation &amp; Data</h3><p>PowerShell, Python, SQL Server, PostgreSQL and MySQL</p></article>
+<article><small>06</small><h3>Platforms &amp; Practice</h3><p>Docker, Kubernetes, debugging, root-cause analysis, code review and Agile delivery</p></article>
+</div></section>
+<section class="dark" id="experience"><label>03 / EXPERIENCE</label><div class="cols">
 <h2>Where I&rsquo;ve<br>made an impact.</h2>
 <div class="timeline">
 <article><small>AUG 2024 &mdash; PRESENT&#12288;/&#12288;SENIOR SOFTWARE ENGINEER · MICROSOFT PROJECT</small><h3>Innominds</h3>
 <p>Engineer Azure-based enterprise solutions spanning infrastructure automation, CI/CD, backend integration, deployment workflows, production support, and troubleshooting. Build reusable YAML pipelines and PowerShell/Azure CLI automation; standardize provisioning with Bicep and ARM templates; and develop integrations with Functions, API Management, Logic Apps, Service Bus, and Event Grid.</p>
+<ul class="role-details"><li><b>Delivery systems</b> Create and maintain build, validation, release, and deployment workflows that reduce repetitive manual steps.</li><li><b>Cloud foundations</b> Convert Azure configuration into reusable, version-controlled infrastructure definitions across environments.</li><li><b>Production reliability</b> Investigate logs and deployment failures, isolate root causes, and turn findings into corrective engineering improvements.</li></ul>
 <span>AZURE DEVOPS</span><span>POWERSHELL</span><span>BICEP</span><span>C#</span></article><article><small>JUL 2021 &mdash; JUL 2024&#12288;/&#12288;SOFTWARE ENGINEER</small><h3>Accenture</h3>
 <p>Delivered C# and .NET enhancements for enterprise applications, translated functional requirements into maintainable components, integrated RESTful APIs with SQL-backed workflows, and resolved production defects while supporting stable Agile releases.</p>
+<ul class="role-details"><li><b>Application delivery</b> Translated business requirements into testable, maintainable .NET components.</li><li><b>System integration</b> Connected REST APIs and relational data workflows to support enterprise processes.</li><li><b>Release support</b> Partnered with QA and engineering teams to validate fixes and stabilize releases through Agile sprints.</li></ul>
 <span>.NET</span><span>REST APIs</span><span>SQL</span><span>AGILE</span></article>
 </div>
 </div></section>
-<section id="projects"><label>03 / SELECTED WORK</label><h2>Problems solved,<br>not just code shipped.</h2>
+<section id="projects"><label>04 / SELECTED WORK</label><div class="section-intro"><h2>Systems designed around<br>real operational problems.</h2><p>Each project demonstrates an end-to-end engineering concern: operating cloud estates, governing infrastructure delivery, or making complex financial decisions understandable.</p></div>
 <div class="projects">
 <article><div class="visual">CLOUDOPS / INCIDENT #2048<br><strong>AI analysis complete &#10003;</strong>
 </div>
 <small>01 &mdash; FEATURED CASE STUDY</small><h3>AI CloudOps Assistant</h3>
 <p>AI-assisted cloud operations platform for log ingestion, incident management, infrastructure health monitoring, root-cause analysis, and remediation guidance, with authenticated APIs and containerized services.</p>
-<b>FastAPI &middot; Python &middot; Next.js &middot; PostgreSQL &middot; Docker &middot; Azure &middot; OpenAI APIs</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article><article><small>02 &mdash; PLATFORM ENGINEERING</small><h3>Modern Infrastructure Deployment Platform</h3>
+<div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Separated ingestion, incident analysis, persistence, and recommendation concerns behind authenticated APIs so each workflow can evolve independently.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>Applied AI grounded in operational context, containerized service design, structured incident workflows, and cloud-aware backend architecture.</p></div></div>
+<div class="outcomes"><span><strong>5</strong> operational workflows</span><span><strong>7</strong> core technologies</span></div><b>FastAPI &middot; Python &middot; Next.js &middot; PostgreSQL &middot; Docker &middot; Azure &middot; OpenAI APIs</b><a href="https://github.com/codebyaash">GitHub profile &#8599;</a></article><article><small>02 &mdash; PLATFORM ENGINEERING</small><h3>DeployForge</h3>
 <p>Template-driven IaC platform featuring deployment history, environment tracking, resource visualization, rollback workflows, and cloud cost estimation.</p>
-<b>Next.js &middot; React &middot; Terraform &middot; Azure &middot; Docker &middot; PostgreSQL</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article><article><small>03 &mdash; FINTECH + AI</small><h3>WealthCompass</h3>
+<div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Built a simulation-first control plane that parses templates, compares desired and stored state, runs policy checks, and persists deployment snapshots without provisioning paid resources.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>JWT-protected APIs, database migrations, interactive dependency graphs, deterministic pipelines, drift detection, CI quality gates, and rollback safety.</p></div></div>
+<div class="outcomes"><span><strong>4</strong> IaC formats</span><span><strong>3</strong> isolated environments</span></div><b>Next.js &middot; FastAPI &middot; Terraform &middot; Azure &middot; PostgreSQL</b><a href="https://github.com/codebyaash/IDP">Repository &#8599;</a> <a href="https://deployforge-eight.vercel.app">Live demo &#8599;</a></article><article><small>03 &mdash; FINTECH + AI</small><h3>WealthCompass</h3>
 <p>A beginner-focused investment companion combining risk profiling, portfolio tracking, financial education, goal planning, and AI-assisted guidance in an extensible full-stack architecture.</p>
-<b>Next.js &middot; FastAPI &middot; PostgreSQL &middot; OpenAI APIs &middot; Supabase</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article>
+<div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Designed a local-first experience with optional Supabase sync, rule engines that remain useful without paid APIs, and clean extension points for AI and market-data providers.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>Risk scoring, multi-goal planning, statement imports, transaction history, cloud synchronization, defensive API handling, testable business rules, and CI.</p></div></div>
+<div class="outcomes"><span><strong>36</strong> documented phases</span><span><strong>6+</strong> investor workflows</span></div><b>Next.js &middot; TypeScript &middot; Supabase &middot; OpenAI APIs &middot; Recharts</b><a href="https://github.com/codebyaash/WealthCompass">Repository &#8599;</a></article>
 </div></section>
-<section class="mint" id="credentials"><label>04 / CREDENTIALS</label><div class="cols">
-<h2>Always learning.<br>Always shipping.</h2>
-<div class="credentials">
-<p><b>AI</b> AI Agents and Agentic AI with Python &amp; Generative AI <span>Vanderbilt · Jun 2026</span></p>
-<p><b>AI</b> Claude Code: Software Engineering with Generative AI Agents <span>Vanderbilt · Jun 2026</span></p>
-<p><b>PE</b> Prompt Engineering for ChatGPT <span>Vanderbilt · Jun 2026</span></p>
-<p><b>CC</b> Introduction to Cloud Computing <span>IBM · Jun 2026</span></p>
-<p><b>DO</b> Introduction to DevOps <span>IBM · Jun 2026</span></p>
-<p><b>PM</b> Foundations of Project Management <span>Google · Jun 2026</span></p>
-<p><b>PM</b> Project Initiation: Starting a Successful Project <span>Google · Jun 2026</span></p>
-<p><b>ED</b> Bachelor of Technology <span>Vellore Institute of Technology · 2017–2021</span></p>
+<section class="mint" id="credentials"><label>05 / CREDENTIALS</label><div class="credential"><div class="credentials-copy"><h2>Credentials that<br>reinforce the craft.</h2><p>Focused learning across Microsoft AI, full-stack engineering, databases, project delivery, and business fundamentals.</p><div class="credential-summary"><strong>7</strong><span>professional credentials</span><strong>4</strong><span>issuing institutions</span></div></div></div>
+<div class="credentials credential-cards">
+<article><b>AZ</b><div><small>Microsoft · May 2026</small><h3>Microsoft Azure AI Fundamentals AI-900 Exam Prep Specialization</h3><code>M457GF4401JR</code></div></article>
+<article><b>AI</b><div><small>Microsoft · Sep 2026</small><h3>AI Agents: From Foundations to Applications</h3><em>Agentic AI Development</em><code>SBW4EUB4857E</code></div></article>
+<article><b>FS</b><div><small>Microsoft · Sep 2026</small><h3>Full-Stack Developer Professional Certificate</h3><em>Full-Stack Development</em><code>7O8MG03HQQ6R</code></div></article>
+<article><b>PM</b><div><small>Google · Jun 2026</small><h3>Foundations of Project Management</h3><em>Project Management</em><code>GEDXF5UMBMJJ</code></div></article>
+<article><b>BV</b><div><small>Corporate Finance Institute · Jun 2026</small><h3>Introduction to Business Valuation</h3><em>Business Valuation</em><code>TOWFU7N1IO7M</code></div></article>
+<article><b>GA</b><div><small>Vanderbilt University · Sep 2026</small><h3>Generative AI Software Engineering Specialization</h3><em>Generative AI · Prompt Engineering</em><code>9FXDLKALRU34</code></div></article>
+<article><b>SQL</b><div><small>Microsoft · Sep 2026</small><h3>Microsoft SQL Server Professional Certificate</h3><em>Microsoft SQL Server</em><code>O3P8T8Y65JR6</code></div></article>
+<article class="education-card"><b>ED</b><div><small>Education · 2017–2021</small><h3>Bachelor of Technology</h3><em>Vellore Institute of Technology</em></div></article>
 </div>
-</div></section>
-<section class="contact" id="contact"><label>05 / CONTACT</label><p>HAVE AN INTERESTING ENGINEERING CHALLENGE?</p>
+</section>
+<section class="contact" id="contact"><label>06 / CONTACT</label><p>HAVE AN INTERESTING ENGINEERING CHALLENGE?</p>
 <h2>Let&rsquo;s build something<br><em>reliable.</em>
 </h2>
 <a href="mailto:codebyaash@gmail.com">codebyaash@gmail.com &#8599;</a><p class="contact-meta">Bengaluru, Karnataka, India · +91 82176 92197</p><div>
-<a href="https://github.com/codebyaash">GitHub &#8599;</a><a href="resume.pdf" download>R&eacute;sum&eacute; &#8595;</a>
+<a href="https://www.linkedin.com/in/aashritha-nagesh-333748250">LinkedIn &#8599;</a><a href="https://github.com/codebyaash">GitHub &#8599;</a><a href="resume.pdf" download>R&eacute;sum&eacute; &#8595;</a>
 </div></section></main><footer class="pagefoot">&copy; <span id="year"></span> AASHRITHA N <a href="#top">BACK TO TOP &uarr;</a></footer><script src="script.js"></script>
 </body>
 </html>
