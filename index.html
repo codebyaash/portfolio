@@ -1,173 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aashritha N developer portfolio">
-    <title>Aashritha N | Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aashritha N &mdash; Senior Software Engineer building reliable backend, cloud and AI systems.">
+<title>Aashritha N &mdash; Senior Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="polish.css">
 </head>
-
 <body>
-    <header class="header">
-        <div class="container nav-container">
-            <h1 class="logo">Aashritha N</h1>
-
-            <button
-                id="menuToggle"
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-            <nav id="navMenu" class="nav-menu" aria-label="Main navigation">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <button id="themeToggle" class="theme-button">
-                    Dark Mode
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div>
-                    <p class="intro">Hello, I'm</p>
-                    <h2>Aashritha N</h2>
-                    <h3>Software Developer</h3>
-
-                    <p>
-                        I enjoy building practical applications using C#, .NET,
-                        cloud technologies, and modern web development tools.
-                    </p>
-
-                    <a href="#projects" class="button">View My Projects</a>
-                </div>
-
-                <img
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
-                    alt="Laptop displaying software development code"
-                    class="hero-image"
-                >
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-
-                <p>
-                    I am a software developer with experience in backend
-                    development, cloud technologies, APIs, databases, and
-                    infrastructure automation. I enjoy learning new technologies
-                    and building applications that solve real problems.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="section alternate">
-            <div class="container">
-                <h2>Skills</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Backend</h3>
-                        <p>C#, .NET, ASP.NET Core, REST APIs</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>Cloud</h3>
-                        <p>Microsoft Azure, Azure Functions, Cloud Computing</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>DevOps</h3>
-                        <p>Git, GitHub, Azure DevOps, CI/CD, Docker</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>Database</h3>
-                        <p>SQL Server, PostgreSQL, MySQL</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>Frontend</h3>
-                        <p>HTML, CSS, JavaScript</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3>AI</h3>
-                        <p>Generative AI, Prompt Engineering, AI Applications</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h3>AI CloudOps Assistant</h3>
-                        <p>
-                            A cloud operations platform designed to monitor
-                            infrastructure, analyze incidents, and provide
-                            AI-assisted troubleshooting.
-                        </p>
-                        <span>C# / Azure / APIs / AI</span>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>Infrastructure Deployment Platform</h3>
-                        <p>
-                            A platform for managing infrastructure templates,
-                            deployments, deployment history, and cloud automation.
-                        </p>
-                        <span>Azure / IaC / DevOps</span>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>Expense Tracker</h3>
-                        <p>
-                            A simple web application for recording and reviewing
-                            expenses with local data storage and summaries.
-                        </p>
-                        <span>HTML / CSS / JavaScript</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section alternate">
-            <div class="container contact-section">
-                <h2>Contact</h2>
-
-                <p>
-                    Interested in connecting or discussing a project?
-                </p>
-
-                <button id="contactButton" class="button">
-                    Show Contact Message
-                </button>
-
-                <p id="contactMessage" class="contact-message" aria-live="polite"></p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            &copy; <span id="year"></span> Aashritha N. Built with HTML, CSS and JavaScript.
-        </p>
-    </footer>
-
-    <script src="script.js"></script>
+<header><a class="logo" href="#top"><b>AN</b> Aashritha N</a><button id="menu" aria-label="Open menu">&#9776;</button><nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#credentials">Credentials</a><a class="pill" href="#contact">Let's talk &#8599;</a></nav></header>
+<main><section class="hero" id="top"><div class="reveal">
+<small><i></i> AVAILABLE FOR SENIOR ENGINEERING OPPORTUNITIES</small><h1>Building reliable<br>backend, cloud &amp;<br><em>AI systems</em> that scale.</h1>
+<p>Senior Software Engineer with 5+ years across backend engineering, Microsoft Azure, Infrastructure as Code, CI/CD, release automation, production support, and enterprise application delivery.</p>
+<div class="actions">
+<a class="primary" href="#projects">Explore my work &darr;</a><a href="resume.pdf" download>Download r&eacute;sum&eacute; &#8599;</a>
+</div>
+</div>
+<div class="terminal reveal">
+<span>&#9679; &#9679; &#9679;&#12288; profile.cs</span><pre><b>public class</b> Engineer {
+  Focus = <q>"Backend + Cloud"</q>;
+  Stack = <q>"Azure / DevOps / .NET"</q>;
+  Mindset = <q>"Build. Measure. Improve."</q>;
+}</pre>
+<footer>5 YEARS EXPERIENCE&#12288; <q>&#9679; ONLINE</q></footer>
+</div></section>
+<div class="ticker">AZURE DEVOPS &#10022; INFRASTRUCTURE AS CODE &#10022; BACKEND ENGINEERING &#10022; APPLIED AI</div>
+<section id="about"><label>01 / ABOUT</label><div class="cols">
+<h2>Engineering clarity<br>into complex systems.</h2>
+<div>
+<p class="lead">I&rsquo;m Aashritha, a Senior Software Engineer specializing in the Microsoft ecosystem. Across roles at <b>Accenture</b> and <b>Innominds</b>, I&rsquo;ve worked where backend engineering, cloud platforms, and delivery automation meet.</p>
+<p>I build version-controlled delivery workflows, reusable cloud infrastructure, API integrations, and maintainable .NET services. My day-to-day toolkit includes Azure DevOps, YAML, PowerShell, Bicep, ARM templates, Terraform, Docker, Kubernetes, C#, Python, and SQL.</p>
+<div class="stats">
+<b>5+<small>Years engineering</small></b><b>7<small>Professional certificates</small></b><b>3<small>Featured projects</small></b>
+</div>
+</div>
+</div></section>
+<section class="dark" id="experience"><label>02 / EXPERIENCE</label><div class="cols">
+<h2>Where I&rsquo;ve<br>made an impact.</h2>
+<div class="timeline">
+<article><small>AUG 2024 &mdash; PRESENT&#12288;/&#12288;SENIOR SOFTWARE ENGINEER · MICROSOFT PROJECT</small><h3>Innominds</h3>
+<p>Engineer Azure-based enterprise solutions spanning infrastructure automation, CI/CD, backend integration, deployment workflows, production support, and troubleshooting. Build reusable YAML pipelines and PowerShell/Azure CLI automation; standardize provisioning with Bicep and ARM templates; and develop integrations with Functions, API Management, Logic Apps, Service Bus, and Event Grid.</p>
+<span>AZURE DEVOPS</span><span>POWERSHELL</span><span>BICEP</span><span>C#</span></article><article><small>JUL 2021 &mdash; JUL 2024&#12288;/&#12288;SOFTWARE ENGINEER</small><h3>Accenture</h3>
+<p>Delivered C# and .NET enhancements for enterprise applications, translated functional requirements into maintainable components, integrated RESTful APIs with SQL-backed workflows, and resolved production defects while supporting stable Agile releases.</p>
+<span>.NET</span><span>REST APIs</span><span>SQL</span><span>AGILE</span></article>
+</div>
+</div></section>
+<section id="projects"><label>03 / SELECTED WORK</label><h2>Problems solved,<br>not just code shipped.</h2>
+<div class="projects">
+<article><div class="visual">CLOUDOPS / INCIDENT #2048<br><strong>AI analysis complete &#10003;</strong>
+</div>
+<small>01 &mdash; FEATURED CASE STUDY</small><h3>AI CloudOps Assistant</h3>
+<p>AI-assisted cloud operations platform for log ingestion, incident management, infrastructure health monitoring, root-cause analysis, and remediation guidance, with authenticated APIs and containerized services.</p>
+<b>FastAPI &middot; Python &middot; Next.js &middot; PostgreSQL &middot; Docker &middot; Azure &middot; OpenAI APIs</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article><article><small>02 &mdash; PLATFORM ENGINEERING</small><h3>Modern Infrastructure Deployment Platform</h3>
+<p>Template-driven IaC platform featuring deployment history, environment tracking, resource visualization, rollback workflows, and cloud cost estimation.</p>
+<b>Next.js &middot; React &middot; Terraform &middot; Azure &middot; Docker &middot; PostgreSQL</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article><article><small>03 &mdash; FINTECH + AI</small><h3>WealthCompass</h3>
+<p>A beginner-focused investment companion combining risk profiling, portfolio tracking, financial education, goal planning, and AI-assisted guidance in an extensible full-stack architecture.</p>
+<b>Next.js &middot; FastAPI &middot; PostgreSQL &middot; OpenAI APIs &middot; Supabase</b><a href="https://github.com/codebyaash">View on GitHub &#8599;</a></article>
+</div></section>
+<section class="mint" id="credentials"><label>04 / CREDENTIALS</label><div class="cols">
+<h2>Always learning.<br>Always shipping.</h2>
+<div class="credentials">
+<p><b>AI</b> AI Agents and Agentic AI with Python &amp; Generative AI <span>Vanderbilt · Jun 2026</span></p>
+<p><b>AI</b> Claude Code: Software Engineering with Generative AI Agents <span>Vanderbilt · Jun 2026</span></p>
+<p><b>PE</b> Prompt Engineering for ChatGPT <span>Vanderbilt · Jun 2026</span></p>
+<p><b>CC</b> Introduction to Cloud Computing <span>IBM · Jun 2026</span></p>
+<p><b>DO</b> Introduction to DevOps <span>IBM · Jun 2026</span></p>
+<p><b>PM</b> Foundations of Project Management <span>Google · Jun 2026</span></p>
+<p><b>PM</b> Project Initiation: Starting a Successful Project <span>Google · Jun 2026</span></p>
+<p><b>ED</b> Bachelor of Technology <span>Vellore Institute of Technology · 2017–2021</span></p>
+</div>
+</div></section>
+<section class="contact" id="contact"><label>05 / CONTACT</label><p>HAVE AN INTERESTING ENGINEERING CHALLENGE?</p>
+<h2>Let&rsquo;s build something<br><em>reliable.</em>
+</h2>
+<a href="mailto:codebyaash@gmail.com">codebyaash@gmail.com &#8599;</a><p class="contact-meta">Bengaluru, Karnataka, India · +91 82176 92197</p><div>
+<a href="https://github.com/codebyaash">GitHub &#8599;</a><a href="resume.pdf" download>R&eacute;sum&eacute; &#8595;</a>
+</div></section></main><footer class="pagefoot">&copy; <span id="year"></span> AASHRITHA N <a href="#top">BACK TO TOP &uarr;</a></footer><script src="script.js"></script>
 </body>
 </html>
