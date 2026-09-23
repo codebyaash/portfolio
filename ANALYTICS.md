@@ -39,4 +39,16 @@ Event parameters are limited to short interface labels such as project name, fil
 4. In GA4, open **Reports → Realtime** to confirm the visit and events. Initial standard reports can take up to 24 hours to populate.
 5. In **Admin → Events**, mark meaningful recruiter actions such as `resume_download`, `contact_click`, `live_demo_visit`, and `credential_view` as key events if desired.
 
+## Debugging custom events
+
+Custom events are sent directly by `analytics.js`; they do not need to be created manually in GA4 first. To verify them from one browser without enabling debug mode for every visitor:
+
+1. Open `https://codebyaash.github.io/portfolio/?ga_debug=1` in a private window.
+2. Select **Allow analytics** in the consent banner.
+3. In GA4, open **Admin → Data display → DebugView**.
+4. Trigger project filters, case-study links, credential links, the résumé download, and contact links.
+5. Confirm the named events appear in the DebugView seconds or minutes stream.
+
+The `ga_debug` query parameter is used only to attach GA4's `debug_mode` flag. Collection still requires explicit analytics consent.
+
 If the measurement ID ever changes, update only the `MEASUREMENT_ID` constant near the top of `analytics.js`.

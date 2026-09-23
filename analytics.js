@@ -5,6 +5,7 @@
   const CONSENT_KEY = 'portfolio-analytics-consent';
   const isLocal = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
   const doNotTrack = navigator.doNotTrack === '1' || window.doNotTrack === '1';
+  const debugMode = new URLSearchParams(window.location.search).get('ga_debug') === '1';
   let scriptLoaded = false;
   let consentGranted = false;
 
@@ -20,17 +21,22 @@
 
   const loadAnalytics = () => {
     if (isLocal || doNotTrack) return;
+    const firstLoad = !scriptLoaded;
+    if (firstLoad) {
+      scriptLoaded = true;
+      window.gtag('js', new Date());
+    }
     consentGranted = true;
     window.gtag('consent', 'update', { analytics_storage: 'granted' });
-    window.gtag('config', MEASUREMENT_ID, {
+    const config = {
       anonymize_ip: true,
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
-      send_page_view: true
-    });
-    if (scriptLoaded) return;
-    scriptLoaded = true;
-    window.gtag('js', new Date());
+      send_page_view: firstLoad
+    };
+    if (debugMode) config.debug_mode = true;
+    window.gtag('config', MEASUREMENT_ID, config);
+    if (!firstLoad) return;
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`;
@@ -43,7 +49,11 @@
     const safeParams = Object.fromEntries(
       Object.entries(params).filter(([, value]) => typeof value === 'string' && value.length <= 80)
     );
-    window.gtag('event', name, safeParams);
+    window.gtag('event', name, {
+      ...safeParams,
+      send_to: MEASUREMENT_ID,
+      ...(debugMode ? { debug_mode: true } : {})
+    });
   };
 
   const removeBanner = () => document.querySelector('.analytics-consent')?.remove();
