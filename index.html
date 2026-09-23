@@ -26,6 +26,36 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#171729">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://codebyaash.github.io/portfolio/#profile",
+      "url": "https://codebyaash.github.io/portfolio/",
+      "name": "Aashritha N — Senior Software Engineer",
+      "description": "Engineering portfolio covering backend development, Azure cloud, DevOps, infrastructure as code and applied AI.",
+      "mainEntity": { "@id": "https://codebyaash.github.io/portfolio/#aashritha" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://codebyaash.github.io/portfolio/#aashritha",
+      "name": "Aashritha N",
+      "url": "https://codebyaash.github.io/portfolio/",
+      "image": "https://codebyaash.github.io/portfolio/assets/social/aashritha-portfolio-og.jpg",
+      "jobTitle": "Senior Software Engineer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vellore Institute of Technology" },
+      "sameAs": [
+        "https://www.linkedin.com/in/aashritha-nagesh-333748250",
+        "https://github.com/codebyaash"
+      ],
+      "knowsAbout": ["Backend engineering", "Microsoft Azure", "Azure DevOps", "Infrastructure as Code", ".NET", "C#", "DevOps", "Applied AI"]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -67,7 +97,7 @@
 <p class="lead">I&rsquo;m Aashritha, a Senior Software Engineer specializing in the Microsoft ecosystem. Across roles at <b>Accenture</b> and <b>Innominds</b>, I&rsquo;ve worked where backend engineering, cloud platforms, and delivery automation meet.</p>
 <p>I build version-controlled delivery workflows, reusable cloud infrastructure, API integrations, and maintainable .NET services. My day-to-day toolkit includes Azure DevOps, YAML, PowerShell, Bicep, ARM templates, Terraform, Docker, Kubernetes, C#, Python, and SQL.</p>
 <div class="stats">
-<b>5+<small>Years engineering</small></b><b>7<small>Professional certificates</small></b><b>3<small>Featured projects</small></b>
+<b>5+<small>Years engineering</small></b><b>7<small>Professional certificates</small></b><b>4<small>Featured projects</small></b>
 </div>
 </div>
 </div></section>
@@ -91,7 +121,7 @@
 <span>.NET</span><span>REST APIs</span><span>SQL</span><span>AGILE</span></article>
 </div>
 </div></section>
-<section id="projects"><label>04 / SELECTED WORK</label><div class="section-intro"><h2>Systems designed around<br>real operational problems.</h2><p>Each project demonstrates an end-to-end engineering concern: operating cloud estates, governing infrastructure delivery, or making complex financial decisions understandable.</p></div>
+<section id="projects"><label>04 / SELECTED WORK</label><div class="section-intro"><h2>Systems designed around<br>real operational problems.</h2><p>Each project demonstrates an end-to-end engineering concern: operating cloud estates, designing Azure architectures, governing infrastructure delivery, or making complex financial decisions understandable.</p></div>
 <div class="projects">
 <article><div class="visual">CLOUDOPS / INCIDENT #2048<br><strong>AI analysis complete &#10003;</strong>
 </div>
@@ -99,11 +129,15 @@
 <p>AI-assisted cloud operations platform for log ingestion, incident management, infrastructure health monitoring, root-cause analysis, and remediation guidance, with authenticated APIs and containerized services.</p>
 <div class="visual-status"><span>Architecture visual</span><small>Interface screenshots will be added when the project repository is public.</small></div>
 <div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Separated ingestion, incident analysis, persistence, and recommendation concerns behind authenticated APIs so each workflow can evolve independently.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>Applied AI grounded in operational context, containerized service design, structured incident workflows, and cloud-aware backend architecture.</p></div></div>
-<div class="outcomes"><span><strong>5</strong> operational workflows</span><span><strong>7</strong> core technologies</span></div><b>FastAPI &middot; Python &middot; Next.js &middot; PostgreSQL &middot; Docker &middot; Azure &middot; OpenAI APIs</b><a href="https://github.com/codebyaash">GitHub profile &#8599;</a></article><article><small>02 &mdash; PLATFORM ENGINEERING</small><h3>DeployForge</h3>
+<div class="outcomes"><span><strong>5</strong> operational workflows</span><span><strong>7</strong> core technologies</span></div><b>FastAPI &middot; Python &middot; Next.js &middot; PostgreSQL &middot; Docker &middot; Azure &middot; OpenAI APIs</b><a href="https://github.com/codebyaash">GitHub profile &#8599;</a></article><article><small>02 &mdash; CLOUD ARCHITECTURE + AI</small><h3>TopologyX</h3>
+<p>An AI architecture copilot that turns natural-language requirements into Azure topology recommendations, interactive diagrams, security reviews, cost estimates, Bicep, Terraform, and scaling guidance.</p>
+<div class="visual-status"><span>Architecture copilot</span><small>Deterministic preview mode remains usable without an AI provider or backend account.</small></div>
+<div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Split the product into a Next.js architecture workspace and a modular FastAPI service, with deterministic generators as a reliable baseline and optional OpenAI or Azure OpenAI enhancement.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>Azure Well-Architected reasoning, React Flow visualization, IaC generation, cost and security analysis, authenticated projects, migrations, history, and testable fallback design.</p></div></div>
+<div class="outcomes"><span><strong>6</strong> architecture outputs</span><span><strong>6</strong> test modules</span></div><b>Next.js &middot; TypeScript &middot; FastAPI &middot; Python &middot; Azure &middot; Terraform &middot; Bicep</b><a href="https://github.com/codebyaash/TopologyX">Repository &#8599;</a></article><article><small>03 &mdash; PLATFORM ENGINEERING</small><h3>DeployForge</h3>
 <p>Template-driven IaC platform featuring deployment history, environment tracking, resource visualization, rollback workflows, and cloud cost estimation.</p>
 <figure class="project-gallery" data-gallery="deployforge"><button type="button" class="gallery-main" aria-label="Open DeployForge screenshot gallery"><img src="assets/projects/deployforge/overview-dashboard.png" alt="DeployForge overview dashboard showing deployment activity, resources and cost estimates" width="1600" height="907" loading="lazy"></button><div class="gallery-thumbs" role="list"><button type="button" class="active" data-src="assets/projects/deployforge/overview-dashboard.png" data-alt="DeployForge overview dashboard showing deployment activity, resources and cost estimates"><img src="assets/projects/deployforge/overview-dashboard.png" alt="" loading="lazy"><span>Overview</span></button><button type="button" data-src="assets/projects/deployforge/upload-plan.png" data-alt="DeployForge infrastructure template upload and deployment planning interface"><img src="assets/projects/deployforge/upload-plan.png" alt="" loading="lazy"><span>Plan</span></button><button type="button" data-src="assets/projects/deployforge/resource-graph.png" data-alt="DeployForge interactive infrastructure resource dependency graph"><img src="assets/projects/deployforge/resource-graph.png" alt="" loading="lazy"><span>Graph</span></button></div><figcaption>Real product captures · Select a view to inspect</figcaption></figure>
 <div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Built a simulation-first control plane that parses templates, compares desired and stored state, runs policy checks, and persists deployment snapshots without provisioning paid resources.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>JWT-protected APIs, database migrations, interactive dependency graphs, deterministic pipelines, drift detection, CI quality gates, and rollback safety.</p></div></div>
-<div class="outcomes"><span><strong>4</strong> IaC formats</span><span><strong>3</strong> isolated environments</span></div><b>Next.js &middot; FastAPI &middot; Terraform &middot; Azure &middot; PostgreSQL</b><a href="https://github.com/codebyaash/IDP">Repository &#8599;</a> <a href="https://deployforge-eight.vercel.app">Live demo &#8599;</a></article><article><small>03 &mdash; FINTECH + AI</small><h3>WealthCompass</h3>
+<div class="outcomes"><span><strong>4</strong> IaC formats</span><span><strong>3</strong> isolated environments</span></div><b>Next.js &middot; FastAPI &middot; Terraform &middot; Azure &middot; PostgreSQL</b><a href="https://github.com/codebyaash/IDP">Repository &#8599;</a> <a href="https://deployforge-eight.vercel.app">Live demo &#8599;</a></article><article><small>04 &mdash; FINTECH + AI</small><h3>WealthCompass</h3>
 <p>A beginner-focused investment companion combining risk profiling, portfolio tracking, financial education, goal planning, and AI-assisted guidance in an extensible full-stack architecture.</p>
 <div class="visual-status"><span>Screenshot pending</span><small>The public repository currently contains no committed product captures.</small></div>
 <div class="project-depth"><div><small>ENGINEERING APPROACH</small><p>Designed a local-first experience with optional Supabase sync, rule engines that remain useful without paid APIs, and clean extension points for AI and market-data providers.</p></div><div><small>WHAT IT DEMONSTRATES</small><p>Risk scoring, multi-goal planning, statement imports, transaction history, cloud synchronization, defensive API handling, testable business rules, and CI.</p></div></div>

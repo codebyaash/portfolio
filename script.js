@@ -67,9 +67,9 @@ themeButton.addEventListener('click', () => {
 const projectsSection = document.querySelector('#projects');
 const projectGrid = projectsSection.querySelector('.projects');
 const projectCards = [...projectGrid.querySelectorAll(':scope > article')];
-const categories = ['cloud ai fullstack', 'cloud fullstack', 'ai fullstack'];
+const categories = ['cloud ai fullstack', 'cloud ai fullstack', 'cloud fullstack', 'ai fullstack'];
 projectCards.forEach((card, index) => { card.dataset.category = categories[index]; });
-const caseStudyPages = ['cloudops.html', 'deployforge.html', 'wealthcompass.html'];
+const caseStudyPages = ['cloudops.html', 'topologyx.html', 'deployforge.html', 'wealthcompass.html'];
 projectCards.forEach((card, index) => {
   const link = document.createElement('a');
   link.className = 'case-study-link';
@@ -107,6 +107,7 @@ applyFilter('all');
 // Progressive disclosure keeps project cards scannable while preserving technical depth.
 const scopes = [
   ['Authenticated REST API boundary', 'PostgreSQL persistence and Docker services', 'Incident triage and remediation flow', 'AI guidance grounded in operational context'],
+  ['Natural-language Azure architecture generation', 'Diagram, cost, security and Well-Architected outputs', 'Bicep and Terraform generation', 'Deterministic preview with optional AI enhancement'],
   ['Terraform, YAML, JSON and Bicep parsing', 'Desired-state planning and drift detection', 'Policy, cost, graph and rollback workflows', 'Tests, migrations and frontend CI checks'],
   ['Local-first workspace with optional Supabase sync', 'Risk, portfolio, goal and mentor rule engines', 'Statement imports and transaction journal', 'Unit tests, input hardening and CI quality gate']
 ];

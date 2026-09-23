@@ -95,7 +95,7 @@
       track('resume_download', { page_context: pageContext });
     } else if (target.classList.contains('credential-link')) {
       track('credential_view', { credential_name: target.closest('article')?.querySelector('h3')?.textContent.trim() || label });
-    } else if (target.classList.contains('case-study-link') || /(?:cloudops|deployforge|wealthcompass)\.html/.test(href)) {
+    } else if (target.classList.contains('case-study-link') || /(?:cloudops|topologyx|deployforge|wealthcompass)\.html/.test(href)) {
       track('case_study_open', { project_name: label });
     } else if (/github\.com/.test(href)) {
       track('repository_visit', { link_label: label });
