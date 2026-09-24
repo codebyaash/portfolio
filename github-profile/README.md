@@ -1,8 +1,8 @@
 # Hi, I'm Aashritha N 👋
 
-### Senior Software Engineer · Backend · Azure Cloud · DevOps · Applied AI
+### Senior Software Engineer · Backend & Integration Engineering · C# · .NET · Azure
 
-I build reliable backend services, repeatable cloud infrastructure, and delivery workflows that help engineering teams ship with confidence. I bring **5+ years of software engineering experience** across Innominds and Accenture, working with the Microsoft ecosystem, Azure DevOps, Infrastructure as Code, automation, and production support.
+I build reliable backend services, RESTful APIs, event-driven integrations, and repeatable cloud delivery workflows. I bring **5+ years of software engineering experience** across Innominds and Accenture, working with C#, .NET, Microsoft Azure, distributed system integrations, Infrastructure as Code, CI/CD, and production reliability.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Explore_my_work-ff8a78?style=for-the-badge)](https://codebyaash.github.io/portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aashritha-nagesh-333748250)
@@ -11,7 +11,7 @@ I build reliable backend services, repeatable cloud infrastructure, and delivery
 ## What I work with
 
 - **Backend:** C#, .NET, Python, FastAPI, REST APIs, SQL
-- **Cloud:** Microsoft Azure, Azure App Service, Azure Functions, Azure SQL
+- **Azure & integration:** Azure Functions, API Management, Logic Apps, Service Bus, Event Grid, Key Vault
 - **DevOps:** Azure DevOps, YAML pipelines, CI/CD, PowerShell, Docker, Kubernetes
 - **Infrastructure as Code:** Bicep, ARM templates, Terraform
 - **Applied AI:** Generative AI, agentic workflows, prompt engineering, OpenAI APIs
@@ -28,8 +28,8 @@ I build reliable backend services, repeatable cloud infrastructure, and delivery
 
 ## Experience snapshot
 
-- **Senior Software Engineer · Innominds** — Azure delivery automation, Infrastructure as Code, PowerShell, C#, and production engineering
-- **Software Engineer · Accenture** — enterprise application delivery, backend development, API integration, SQL, and production support
+- **Senior Software Engineer · Innominds** — backend and integration engineering for enterprise Microsoft workloads across APIs, Azure messaging, orchestration, IaC, CI/CD, and production reliability
+- **Software Engineer · Accenture** — enterprise integration development across C#/.NET services, REST APIs, middleware, SQL-backed applications, and production support
 - **Bachelor of Technology · Vellore Institute of Technology**
 
 ## Professional development

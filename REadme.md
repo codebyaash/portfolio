@@ -3,7 +3,7 @@
 [![Live portfolio](https://img.shields.io/badge/Live_Portfolio-View_site-ff8a78?style=for-the-badge)](https://codebyaash.github.io/portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aashritha-nagesh-333748250)
 
-Recruiter-focused engineering portfolio for a Senior Software Engineer specializing in backend systems, Microsoft Azure, DevOps, Infrastructure as Code, and applied AI.
+Recruiter-focused engineering portfolio for a Senior Software Engineer specializing in backend and integration engineering with C#, .NET, Microsoft Azure, REST APIs, event-driven systems, and cloud automation.
 
 ![Aashritha N engineering portfolio](assets/social/aashritha-portfolio-og.jpg)
 
