@@ -153,21 +153,40 @@ document.addEventListener('keydown', (event) => {
 // Real project screenshots: thumbnail switching and a native, keyboard-friendly lightbox.
 document.querySelectorAll('.project-gallery').forEach((gallery) => {
   const mainImage = gallery.querySelector('.gallery-main img');
+  const thumbs = [...gallery.querySelectorAll('.gallery-thumbs button[data-src]')];
+  const selectImage = (index) => {
+    const thumb = thumbs[(index + thumbs.length) % thumbs.length];
+    mainImage.src = thumb.dataset.src;
+    mainImage.alt = thumb.dataset.alt;
+    thumbs.forEach((button) => button.classList.toggle('active', button === thumb));
+  };
   gallery.querySelector('.gallery-thumbs').addEventListener('click', (event) => {
     const thumb = event.target.closest('button[data-src]');
     if (!thumb) return;
-    mainImage.src = thumb.dataset.src;
-    mainImage.alt = thumb.dataset.alt;
-    gallery.querySelectorAll('.gallery-thumbs button').forEach((button) => button.classList.toggle('active', button === thumb));
+    selectImage(thumbs.indexOf(thumb));
   });
 
   gallery.querySelector('.gallery-main').addEventListener('click', () => {
+    let activeIndex = Math.max(0, thumbs.findIndex((thumb) => thumb.dataset.src === mainImage.getAttribute('src')));
     const dialog = document.createElement('dialog');
     dialog.className = 'gallery-dialog';
-    dialog.innerHTML = `<button type="button" aria-label="Close screenshot">×</button><img src="${mainImage.src}" alt="${mainImage.alt}">`;
+    dialog.innerHTML = `<button type="button" class="gallery-close" aria-label="Close screenshot">×</button><button type="button" class="gallery-previous" aria-label="Previous screenshot">‹</button><img src="${mainImage.src}" alt="${mainImage.alt}"><button type="button" class="gallery-next" aria-label="Next screenshot">›</button>`;
     document.body.append(dialog);
-    dialog.querySelector('button').addEventListener('click', () => dialog.close());
+    const dialogImage = dialog.querySelector('img');
+    const updateDialog = (direction) => {
+      activeIndex = (activeIndex + direction + thumbs.length) % thumbs.length;
+      selectImage(activeIndex);
+      dialogImage.src = mainImage.src;
+      dialogImage.alt = mainImage.alt;
+    };
+    dialog.querySelector('.gallery-close').addEventListener('click', () => dialog.close());
+    dialog.querySelector('.gallery-previous').addEventListener('click', () => updateDialog(-1));
+    dialog.querySelector('.gallery-next').addEventListener('click', () => updateDialog(1));
     dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); updateDialog(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); updateDialog(1); }
+    });
     dialog.addEventListener('close', () => dialog.remove());
     dialog.showModal();
   });
