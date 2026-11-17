@@ -21,7 +21,8 @@
   "mainEntityOfPage": "https://codebyaash.github.io/portfolio/cloudops.html",
   "image": "https://codebyaash.github.io/portfolio/assets/social/cloudops-og.png",
   "author": { "@type": "Person", "name": "Aashritha N", "url": "https://codebyaash.github.io/portfolio/" },
-  "keywords": ["CloudOps", "Applied AI", "FastAPI", "Azure", "Incident response", "Root-cause analysis"]
+  "keywords": ["CloudOps", "Applied AI", "FastAPI", "Azure", "Incident response", "Root-cause analysis"],
+  "sameAs": "https://github.com/codebyaash/ai-cloudops-assistant"
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -35,15 +36,15 @@
 </head>
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
-<a href="topologyx.html">TopologyX</a><a href="deployforge.html">DeployForge</a><a href="wealthcompass.html">WealthCompass</a><a href="https://github.com/codebyaash">GitHub &#8599;</a>
+<a href="topologyx.html">TopologyX</a><a href="deployforge.html">DeployForge</a><a href="wealthcompass.html">WealthCompass</a><a href="https://github.com/codebyaash/ai-cloudops-assistant">GitHub &#8599;</a>
 </div></nav><main id="main-content"><header class="case-hero"><div class="case-kicker">Cloud operations + applied AI &middot; Case study 01</div>
 <h1>AI CloudOps Assistant</h1>
-<p>An operations workspace bringing logs, incidents, infrastructure health, root-cause analysis and remediation guidance into one workflow.</p><div class="case-actions"><a class="primary" href="#evidence">Case study evidence &darr;</a></div></header><div class="case-metrics">
+<p>An operations workspace bringing logs, incidents, infrastructure health, root-cause analysis and remediation guidance into one workflow.</p><div class="case-actions"><a class="primary" href="https://github.com/codebyaash/ai-cloudops-assistant">Repository &#8599;</a><a href="#evidence">Case study evidence &darr;</a></div></header><div class="case-metrics">
 <div>
 <strong>5</strong><span>Ops workflows</span>
 </div>
 <div>
-<strong>7</strong><span>Technologies</span>
+<strong>94</strong><span>Automated tests</span>
 </div>
 <div>
 <strong>API</strong><span>Authenticated</span>
@@ -59,7 +60,7 @@
 <p>The platform organizes incident signals behind authenticated APIs, persists operational context, and applies AI to summarize evidence, suggest likely causes and surface remediation guidance.</p>
 <pre class="flow">Telemetry &rarr; Ingestion &rarr; Incident context &rarr; Health correlation &rarr; AI analysis &rarr; Root-cause hypothesis &rarr; Remediation guidance</pre>
 </div></section><section class="case-section"><h2>Product views</h2>
-<div><p>Selected screens from the working product show the authenticated entry point, incident workflow, observability views and project management interface.</p><div class="case-gallery"><img src="assets/projects/cloudops/Login.webp" alt="AI CloudOps Assistant sign-in screen" width="2939" height="1577" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard.webp" alt="AI CloudOps Assistant dashboard with incident metrics and trend charts" width="2939" height="1661" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard-Operations+Projects.webp" alt="AI CloudOps Assistant dashboard operations and project status panels" width="2939" height="1669" width="2550" height="1664" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard-ActiveIncidents.webp" alt="AI CloudOps Assistant active incidents dashboard panel" width="2939" height="1666" width="2936" height="1661" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Incidents.webp" alt="AI CloudOps Assistant incident management queue" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Logs.webp" alt="AI CloudOps Assistant searchable log explorer" width="2939" height="1668" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Projects.webp" alt="AI CloudOps Assistant project management screen" loading="lazy" decoding="async"></div></div></section><section class="case-section"><h2>Architecture</h2>
+<div><p>Selected screens from the working product show the authenticated entry point, incident workflow, observability views and project management interface.</p><div class="case-gallery"><img src="assets/projects/cloudops/Login.webp" alt="AI CloudOps Assistant sign-in screen" width="2939" height="1577" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard.webp" alt="AI CloudOps Assistant dashboard with incident metrics and trend charts" width="2939" height="1661" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard-Operations+Projects.webp" alt="AI CloudOps Assistant dashboard operations and project status panels" width="2550" height="1664" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Dashboard-ActiveIncidents.webp" alt="AI CloudOps Assistant active incidents dashboard panel" width="2936" height="1661" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Incidents.webp" alt="AI CloudOps Assistant incident management queue" width="2939" height="1666" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Logs.webp" alt="AI CloudOps Assistant searchable log explorer" width="2939" height="1668" loading="lazy" decoding="async"><img src="assets/projects/cloudops/Projects.webp" alt="AI CloudOps Assistant project management screen" width="2939" height="1669" loading="lazy" decoding="async"></div></div></section><section class="case-section"><h2>Architecture</h2>
 <div class="decision-grid"><div class="architecture-explorer" data-architecture="cloudops" aria-label="Interactive AI CloudOps architecture"></div><noscript><figure class="architecture-frame static-architecture-fallback"><img src="assets/projects/cloudops-architecture.svg" alt="AI CloudOps architecture showing operational signals, ingestion, APIs, incident context, persistence and AI-assisted analysis"><figcaption>Evidence-to-guidance system architecture</figcaption></figure></noscript>
 <article class="decision"><small>Experience</small><h3>Next.js operations UI</h3>
 <p>Incident, monitoring and guided-investigation workflows.</p></article><article class="decision"><small>Services</small><h3>FastAPI boundary</h3>
@@ -75,12 +76,12 @@
 <h3>Human in the loop</h3>
 <p>The product supports investigation decisions; it does not imply autonomous production changes.</p>
 </div></section><section class="case-section" id="evidence"><h2>Engineering evidence</h2><div><div class="evidence-grid">
-<article class="evidence-card"><small>Testing scope</small><strong>Evidence roadmap</strong><p>API contracts, incident-state transitions and AI fallback evaluation are identified as the next public verification layer; no public test suite is currently linked.</p></article>
-<article class="evidence-card"><small>API surface</small><strong>Authenticated boundary</strong><p>Ingestion, incidents, analysis and recommendations are separated behind authenticated APIs. An exact endpoint count remains unpublished.</p></article>
+<article class="evidence-card"><small>Testing scope</small><strong>94 tests · 13 files</strong><p>Backend coverage spans authentication, organizations, projects, ingestion, incidents, metrics, AI analysis, Celery tasks and WebSocket workflows.</p></article>
+<article class="evidence-card"><small>API surface</small><strong>31 routes</strong><p>Authenticated APIs cover projects, logs, incidents, metrics, ingestion and real-time operational updates.</p></article>
 <article class="evidence-card"><small>Security controls</small><strong>Human approval</strong><p>Operational context is access-controlled and AI output remains advisory—no autonomous production changes are represented.</p></article>
 <article class="evidence-card"><small>Reliability observation</small><strong>Separable failure paths</strong><p>Telemetry ingestion, persistence, correlation and model guidance can fail or evolve independently instead of collapsing into one opaque request.</p></article>
 <article class="evidence-card"><small>Architecture trade-off</small><strong>Context before speed</strong><p>The workflow spends more effort assembling evidence before inference, trading a shorter prompt path for more reviewable guidance.</p></article>
-<article class="evidence-card"><small>CI/CD status</small><strong>Not publicly evidenced</strong><p>Containerized execution is documented; a public repository and CI workflow will be linked when they are ready to verify.</p></article>
+<article class="evidence-card"><small>CI/CD checks</small><strong>3 CI jobs + Docker validation</strong><p>GitHub Actions compiles and tests the backend with coverage, verifies PostgreSQL migrations, lints/type-checks/builds the frontend, and validates Compose configurations.</p></article>
 </div><div class="workflow-compare"><div><small>Before</small><p>Logs, health signals and incident knowledge are inspected across separate tools before a hypothesis can be formed.</p></div><span class="workflow-arrow" aria-hidden="true">&rarr;</span><div><small>After</small><p>Evidence is assembled into one incident context, then AI guidance is presented for human review.</p></div></div></div></section><section class="case-section"><h2>Next iteration</h2>
 <div><ul>
 <li>Add evaluation fixtures for analysis quality</li>

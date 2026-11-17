@@ -10,7 +10,7 @@ const architectureModels = {
       ['signals', 'Operational signals', 6, 47, 'Telemetry', 'Logs, health signals and incident events enter through explicit ingestion paths.', 'External'],
       ['ui', 'Next.js workspace', 6, 12, 'Experience', 'Authenticated incident, log and investigation workflows for human operators.', 'Public edge'],
       ['ingest', 'Ingestion service', 31, 47, 'Service', 'Normalizes incoming operational evidence before it is attached to an incident.', 'Private service'],
-      ['api', 'FastAPI boundary', 31, 12, 'API', 'Owns authentication, validation and workflow contracts.', 'Trust boundary'],
+      ['api', 'FastAPI boundary', 31, 12, 'API', 'Thirty-one routes own authentication, validation and operational workflow contracts.', 'Trust boundary'],
       ['analysis', 'Analysis engine', 57, 47, 'Service', 'Correlates health and incident context before requesting AI guidance.', 'Private service'],
       ['db', 'PostgreSQL', 57, 12, 'Data', 'Persists users, operational events and incident context.', 'Data boundary'],
       ['ai', 'AI provider', 82, 47, 'External AI', 'Produces evidence-grounded hypotheses and guidance; never performs production changes.', 'External boundary']
