@@ -1,6 +1,8 @@
 const architectureModels = {
   cloudops: {
+    overview: { title: 'From signal to human-reviewed remediation', summary: 'Operational signals become normalized evidence, persisted incident context, correlated analysis and AI-assisted guidance inside one authenticated operator workflow.', journey: ['signals','ingest','analysis','ai','db','api','ui'] },
     modes: {
+      overview: ['signals', 'ui', 'ingest', 'api', 'analysis', 'db', 'ai'],
       services: ['ui', 'api', 'ingest', 'analysis', 'db', 'ai'],
       data: ['signals', 'ingest', 'api', 'db', 'analysis', 'ai', 'ui'],
       security: ['ui', 'api', 'db', 'ai'],
@@ -18,7 +20,8 @@ const architectureModels = {
     links: [['signals','ingest'],['ingest','analysis'],['ui','api'],['api','db'],['api','analysis'],['analysis','ai'],['ai','analysis'],['analysis','ui']]
   },
   topologyx: {
-    modes: { services: ['ui','api','engine','ai','db','outputs'], data: ['brief','api','engine','ai','outputs','db'], security: ['ui','api','db','ai'], deployment: ['ui','api','db','ai'] },
+    overview: { title: 'From workload brief to reviewable Azure plan', summary: 'A structured request moves through deterministic and optional AI generation, then stays connected to project history and six engineering outputs.', journey: ['brief','engine','ai','outputs','db','api','ui'] },
+    modes: { overview: ['brief','ui','api','engine','ai','db','outputs'], services: ['ui','api','engine','ai','db','outputs'], data: ['brief','api','engine','ai','outputs','db'], security: ['ui','api','db','ai'], deployment: ['ui','api','db','ai'] },
     nodes: [
       ['brief','Workload brief',5,47,'Input','Natural-language requirements are normalized into a structured architecture request.','User input'],
       ['ui','Next.js workspace',5,12,'Experience','Project workspace, React Flow topology and Monaco-based IaC review.','Vercel edge'],
@@ -31,7 +34,8 @@ const architectureModels = {
     links: [['brief','engine'],['ui','api'],['api','engine'],['api','db'],['engine','ai'],['ai','engine'],['engine','outputs'],['outputs','db']]
   },
   deployforge: {
-    modes: { services: ['ui','api','parser','policy','db','graph'], data: ['template','parser','policy','db','graph'], security: ['ui','api','policy','db'], deployment: ['github','ui','api','db'] },
+    overview: { title: 'From infrastructure template to recoverable state', summary: 'A template passes through parsing, desired-state comparison and policy checks before a simulated deployment is stored and exposed as graph, cost, history and rollback evidence.', journey: ['template','parser','policy','db','graph','api','ui','github'] },
+    modes: { overview: ['template','ui','parser','api','policy','db','graph','github'], services: ['ui','api','parser','policy','db','graph'], data: ['template','parser','policy','db','graph'], security: ['ui','api','policy','db'], deployment: ['github','ui','api','db'] },
     nodes: [
       ['template','IaC template',5,47,'Input','Terraform, Bicep, YAML or JSON enters the simulation pipeline.','Untrusted input'],
       ['ui','Next.js dashboard',5,12,'Experience','Planning, cost, dependency graph, history and rollback workflows.','Vercel edge'],
@@ -45,7 +49,8 @@ const architectureModels = {
     links: [['template','parser'],['ui','api'],['api','parser'],['parser','policy'],['policy','db'],['db','graph'],['github','ui'],['github','api']]
   },
   wealthcompass: {
-    modes: { services: ['ui','rules','routes','supabase','providers'], data: ['input','rules','ui','supabase','providers'], security: ['ui','routes','supabase','providers'], deployment: ['github','ui','supabase','providers'] },
+    overview: { title: 'From investor inputs to resilient guidance', summary: 'Validated user data feeds deterministic domain rules and a local-first workspace, with server routes selectively adding cloud persistence and external providers.', journey: ['input','rules','ui','routes','supabase','providers','github'] },
+    modes: { overview: ['input','ui','rules','routes','supabase','providers','github'], services: ['ui','rules','routes','supabase','providers'], data: ['input','rules','ui','supabase','providers'], security: ['ui','routes','supabase','providers'], deployment: ['github','ui','supabase','providers'] },
     nodes: [
       ['input','Investor data',5,47,'Input','Profile, holdings, goals, statements and transaction history enter through validated flows.','User data'],
       ['ui','Next.js workspace',5,12,'Experience','Dashboard, portfolio, goals, academy, market and mentor surfaces.','Vercel edge'],
@@ -59,16 +64,16 @@ const architectureModels = {
   }
 };
 
-const modeLabels = { services: 'Services', data: 'Data flow', security: 'Security boundaries', deployment: 'Deployment topology' };
+const modeLabels = { overview: 'Overview', services: 'Services', data: 'Data flow', security: 'Security boundaries', deployment: 'Deployment topology' };
 
 document.querySelectorAll('[data-architecture]').forEach((root) => {
   const model = architectureModels[root.dataset.architecture];
   if (!model) return;
-  root.innerHTML = `<div class="architecture-toolbar" role="tablist" aria-label="Architecture view">${Object.entries(modeLabels).map(([id, label], index) => `<button type="button" role="tab" aria-selected="${index === 0}" data-mode="${id}">${label}</button>`).join('')}</div><div class="architecture-stage"><svg class="architecture-links" aria-hidden="true"></svg><div class="architecture-nodes"></div></div><div class="architecture-inspector" aria-live="polite"></div><p class="architecture-help">Select a node for implementation detail. Use Tab to move through the architecture.</p>`;
+  root.innerHTML = `<div class="architecture-toolbar" role="tablist" aria-label="Architecture view">${Object.entries(modeLabels).map(([id, label], index) => `<button type="button" role="tab" aria-selected="${index === 0}" data-mode="${id}">${label}</button>`).join('')}</div><section class="architecture-overview-card" aria-labelledby="${root.dataset.architecture}-overview-title"><div><small>End-to-end overview</small><h3 id="${root.dataset.architecture}-overview-title">${model.overview.title}</h3><p>${model.overview.summary}</p></div><div class="architecture-overview-path" aria-label="Select a stage in the complete flow">${model.overview.journey.map((id, index) => { const node=model.nodes.find(([nodeId]) => nodeId===id); return `<button type="button" data-overview-node="${id}"><span>${String(index + 1).padStart(2,'0')}</span>${node[1]}</button>`; }).join('')}</div></section><div class="architecture-stage"><svg class="architecture-links" aria-hidden="true"></svg><div class="architecture-nodes"></div></div><div class="architecture-inspector" aria-live="polite"></div><p class="architecture-help">Select a stage or node for implementation detail. Use the arrow keys across view tabs.</p>`;
   const nodesHost = root.querySelector('.architecture-nodes');
   const inspector = root.querySelector('.architecture-inspector');
   const svg = root.querySelector('svg');
-  let mode = 'services';
+  let mode = 'overview';
   let selected = model.nodes[0][0];
 
   const render = () => {
@@ -77,6 +82,7 @@ document.querySelectorAll('[data-architecture]').forEach((root) => {
     nodesHost.innerHTML = model.nodes.filter(([id]) => visible.has(id)).map(([id,label,x,y,type,,boundary]) => `<button type="button" class="architecture-node${id === selected ? ' selected' : ''}" style="--x:${x}%;--y:${y}%" data-node="${id}" aria-pressed="${id === selected}"><small>${type}</small><strong>${label}</strong><span>${boundary}</span></button>`).join('');
     const node = model.nodes.find(([id]) => id === selected);
     inspector.innerHTML = `<div><small>${node[4]} · ${node[6]}</small><h3>${node[1]}</h3></div><p>${node[5]}</p>`;
+    root.querySelectorAll('[data-overview-node]').forEach((button) => button.classList.toggle('active', button.dataset.overviewNode === selected));
     requestAnimationFrame(drawLinks);
   };
 
@@ -107,6 +113,15 @@ document.querySelectorAll('[data-architecture]').forEach((root) => {
     tabs[next].focus();
   });
   nodesHost.addEventListener('click', (event) => { const button=event.target.closest('[data-node]'); if(button){selected=button.dataset.node;render();nodesHost.querySelector(`[data-node="${selected}"]`).focus();} });
+  root.querySelector('.architecture-overview-path').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-overview-node]');
+    if (!button) return;
+    mode = 'overview';
+    selected = button.dataset.overviewNode;
+    root.querySelectorAll('[role="tab"]').forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.mode === mode)));
+    render();
+    nodesHost.querySelector(`[data-node="${selected}"]`)?.focus();
+  });
   new ResizeObserver(drawLinks).observe(root.querySelector('.architecture-stage'));
   render();
 });

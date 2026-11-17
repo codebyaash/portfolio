@@ -1,0 +1,65 @@
+.architecture-overview-card {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  padding: 22px;
+  border-bottom: 1px solid #ffffff20;
+  background: linear-gradient(135deg, #24213a, #171727);
+}
+
+.architecture-overview-card small {
+  color: #ff9a8c;
+  font: 8px 'DM Mono';
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.architecture-overview-card h3 {
+  margin: 8px 0 8px !important;
+  color: #fff;
+  font-size: 18px;
+}
+
+.architecture-overview-card p {
+  margin: 0;
+  color: #b8b4c5;
+  font-size: 12px;
+}
+
+.architecture-overview-path {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  align-content: center;
+}
+
+.architecture-overview-path button {
+  min-height: 54px;
+  padding: 8px;
+  border: 1px solid #ffffff20;
+  border-radius: 6px;
+  background: #ffffff08;
+  color: #d9d5e1;
+  text-align: left;
+  font: 9px/1.35 'DM Mono';
+  cursor: pointer;
+}
+
+.architecture-overview-path button:hover,
+.architecture-overview-path button.active {
+  border-color: #ff8a78;
+  background: #ff8a7818;
+  color: #fff;
+}
+
+.architecture-overview-path span {
+  display: block;
+  margin-bottom: 4px;
+  color: #ff9a8c;
+  font-size: 8px;
+}
+
+@media (max-width: 760px) {
+  .architecture-overview-card { grid-template-columns: 1fr; }
+  .architecture-overview-path { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
