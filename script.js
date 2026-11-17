@@ -69,15 +69,6 @@ const projectGrid = projectsSection.querySelector('.projects');
 const projectCards = [...projectGrid.querySelectorAll(':scope > article')];
 const categories = ['cloud ai fullstack', 'cloud ai fullstack', 'cloud fullstack', 'ai fullstack'];
 projectCards.forEach((card, index) => { card.dataset.category = categories[index]; });
-const caseStudyPages = ['cloudops.html', 'topologyx.html', 'deployforge.html', 'wealthcompass.html'];
-projectCards.forEach((card, index) => {
-  const link = document.createElement('a');
-  link.className = 'case-study-link';
-  link.href = caseStudyPages[index];
-  link.textContent = 'Read case study →';
-  card.append(link);
-});
-
 const filters = document.createElement('div');
 filters.className = 'project-tools';
 filters.setAttribute('aria-label', 'Filter projects');
@@ -141,7 +132,7 @@ help.className = 'kbd-help';
 help.textContent = 'P projects · R résumé';
 document.body.append(help);
 document.addEventListener('keydown', (event) => {
-  if (/input|textarea/i.test(document.activeElement.tagName)) return;
+  if (/input|textarea|button|summary|a/i.test(document.activeElement.tagName)) return;
   if (event.key.toLowerCase() === 'p') projectsSection.scrollIntoView({ behavior: 'smooth' });
   if (event.key.toLowerCase() === 'r') document.querySelector('a[download]').click();
   if (event.key === 'Escape') {

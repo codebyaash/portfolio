@@ -30,15 +30,16 @@
 <link rel="stylesheet" href="architecture.css">
 <link rel="stylesheet" href="audit-fixes.css">
 <link rel="stylesheet" href="case-navigation.css">
+<link rel="stylesheet" href="case-enhancements.css">
 <link rel="stylesheet" href="analytics.css">
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
 <a href="cloudops.html">CloudOps</a><a href="deployforge.html">DeployForge</a><a href="wealthcompass.html">WealthCompass</a><a href="https://github.com/codebyaash/TopologyX">GitHub &#8599;</a>
-</div></nav><main><header class="case-hero"><div class="case-kicker">Azure architecture + applied AI &middot; Case study 02</div>
+</div></nav><main id="main-content"><header class="case-hero"><div class="case-kicker">Azure architecture + applied AI &middot; Case study 02</div>
 <h1>TopologyX</h1>
 <p>An AI architecture copilot that converts natural-language system requirements into explainable Azure designs, interactive topology, security and cost analysis, and deployable IaC starting points.</p>
-<div class="case-actions"><a class="primary" href="https://github.com/codebyaash/TopologyX">View source &#8599;</a></div></header><div class="case-metrics">
+<div class="case-actions"><a class="primary" href="https://github.com/codebyaash/TopologyX">Repository &#8599;</a><a class="case-action-secondary" href="#evidence">Case study evidence &darr;</a></div></header><div class="case-metrics">
 <div><strong>6</strong><span>Output types</span></div>
 <div><strong>2</strong><span>Run modes</span></div>
 <div><strong>2</strong><span>AI providers</span></div>
@@ -53,9 +54,9 @@
 <p>TopologyX accepts a natural-language workload brief and produces a connected architecture package: recommended Azure services, an interactive graph, Well-Architected observations, a monthly cost estimate, scaling guidance, and Bicep and Terraform drafts.</p>
 <pre class="flow">Requirements &rarr; Normalize context &rarr; Select Azure services &rarr; Build topology &rarr; Review pillars &rarr; Estimate cost &rarr; Generate Bicep + Terraform &rarr; Save run</pre>
 </div></section>
-<section class="case-section"><h2>Product flow</h2><div><p>From a high-level brief to an implementable Azure plan: the portfolio captures follow the same sequence a reviewer uses in the product.</p><div class="case-gallery"><img src="assets/projects/topologyx/topologyx-overview.png" alt="TopologyX landing page with architecture copilot overview and recommended services" width="1600" height="1000" loading="lazy"><img src="assets/projects/topologyx/topologyx-generator-diagram.png" alt="TopologyX generated Azure topology diagram" width="1600" height="1000" loading="lazy"><img src="assets/projects/topologyx/topologyx-security-review.png" alt="TopologyX HIPAA-focused security review" width="1600" height="1000" loading="lazy"><img src="assets/projects/topologyx/topologyx-iac-output.png" alt="TopologyX Infrastructure as Code modules view" width="1600" height="1000" loading="lazy"></div></div></section>
+<section class="case-section"><h2>Product flow</h2><div><p>From a high-level brief to an implementable Azure plan: the portfolio captures follow the same sequence a reviewer uses in the product.</p><div class="case-gallery"><img src="assets/projects/topologyx/topologyx-overview.webp" alt="TopologyX landing page with architecture copilot overview and recommended services" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/topologyx/topologyx-generator-diagram.webp" alt="TopologyX generated Azure topology diagram" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/topologyx/topologyx-security-review.webp" alt="TopologyX HIPAA-focused security review" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/topologyx/topologyx-iac-output.webp" alt="TopologyX Infrastructure as Code modules view" width="1600" height="1000" loading="lazy" decoding="async"></div></div></section>
 <section class="case-section"><h2>Architecture</h2><div class="decision-grid">
-<figure class="architecture-frame"><img src="assets/projects/topologyx-architecture.svg" alt="TopologyX architecture showing the Next.js workspace, FastAPI services, deterministic and AI generation paths, persistence, and architecture outputs"><figcaption>Dual-mode architecture generation and review flow</figcaption></figure>
+<div class="architecture-explorer" data-architecture="topologyx" aria-label="Interactive TopologyX architecture"></div><noscript><figure class="architecture-frame static-architecture-fallback"><img src="assets/projects/topologyx-architecture.svg" alt="TopologyX architecture showing the Next.js workspace, FastAPI services, deterministic and AI generation paths, persistence, and architecture outputs"><figcaption>Dual-mode architecture generation and review flow</figcaption></figure></noscript>
 <article class="decision"><small>Experience</small><h3>Next.js workspace</h3><p>Project management, prompt-driven generation, React Flow diagrams and Monaco-based IaC review.</p></article>
 <article class="decision"><small>Services</small><h3>Modular FastAPI backend</h3><p>Separates architecture, security, cost and IaC generation behind authenticated APIs.</p></article>
 <article class="decision"><small>Intelligence</small><h3>Deterministic + AI paths</h3><p>A local rules engine provides stable output; OpenAI or Azure OpenAI can enhance the result when configured.</p></article>
@@ -66,19 +67,20 @@
 <h3>AI as enhancement, not dependency</h3><p>The backend falls back to deterministic generation when an AI provider is unavailable, keeping the core workflow predictable and demonstrable.</p>
 <h3>Review through engineering lenses</h3><p>Outputs are framed around reliability, security, cost optimization, operational excellence and performance efficiency rather than producing a diagram alone.</p>
 </div></section>
-<section class="case-section"><h2>Quality &amp; evidence</h2><div><ul>
-<li>Frontend tests cover the architecture engine, API service and project workspace</li>
-<li>Backend tests cover sessions, project ownership, generation, history and AI fallback behavior</li>
-<li>Alembic migrations version the project and architecture-request schema</li>
-<li>Docker configuration and deployment documentation support repeatable environments</li>
-<li>Example scenarios span healthcare, ecommerce, fintech, SaaS, IoT and document processing</li>
-</ul></div></section>
+<section class="case-section" id="evidence"><h2>Engineering evidence</h2><div><div class="evidence-grid">
+<article class="evidence-card"><small>Testing scope</small><strong>16 tests · 6 modules</strong><p>Backend tests cover authentication, ownership, generation history and fallback behavior; frontend tests cover the engine, service layer and workspace.</p></article>
+<article class="evidence-card"><small>API surface</small><strong>9 routes</strong><p>Health, registration, login, session, project creation and retrieval, generation, and run-history workflows are exposed through FastAPI.</p></article>
+<article class="evidence-card"><small>Security controls</small><strong>Owner-scoped sessions</strong><p>Signed sessions, password validation, explicit CORS origins and project ownership tests constrain access to saved architectures.</p></article>
+<article class="evidence-card"><small>Reliability observation</small><strong>Deterministic fallback</strong><p>Provider timeouts, invalid output and internal inconsistency are tested; each condition falls back to locally generated architecture output.</p></article>
+<article class="evidence-card"><small>Architecture trade-off</small><strong>Baseline before novelty</strong><p>Rules improve predictability and offline use, while optional AI adds breadth. The cost is maintaining two generation paths and consistency checks.</p></article>
+<article class="evidence-card"><small>CI/CD status</small><strong>Local gates documented</strong><p>Frontend and backend test commands, Docker configuration and deployment checklists exist; a repository-level GitHub Actions workflow is not yet present.</p></article>
+</div><div class="workflow-compare"><div><small>Before</small><p>Diagram, security notes, cost estimates and IaC drafts live in disconnected artifacts.</p></div><span class="workflow-arrow" aria-hidden="true">&rarr;</span><div><small>After</small><p>One workload brief produces six aligned outputs saved with project and run context.</p></div></div></div></section>
 <section class="case-section"><h2>Next iteration</h2><div><ul>
 <li>Add browser-level coverage for the complete generate-and-save journey</li>
 <li>Introduce evaluation fixtures for architecture and IaC output quality</li>
 <li>Add versioned comparisons between architecture runs</li>
 <li>Publish a hosted demo with controlled model usage and observability</li>
 </ul></div></section>
-<nav class="case-pagination" aria-label="Case study navigation"><a href="cloudops.html"><small>&larr; Previous project</small><strong>AI CloudOps Assistant</strong></a><a href="deployforge.html"><small>Next project &rarr;</small><strong>DeployForge</strong></a></nav></div></main><footer><span>&copy; Aashritha N</span><button type="button" class="analytics-preferences" data-analytics-preferences>Analytics preferences</button><a href="index.html#projects">Back to portfolio &uarr;</a></footer><script src="analytics.js"></script>
+<nav class="case-pagination" aria-label="Case study navigation"><a href="cloudops.html"><small>&larr; Previous project</small><strong>AI CloudOps Assistant</strong></a><a href="deployforge.html"><small>Next project &rarr;</small><strong>DeployForge</strong></a></nav></div></main><footer><span>&copy; Aashritha N</span><button type="button" class="analytics-preferences" data-analytics-preferences>Analytics preferences</button><a href="index.html#projects">Back to portfolio &uarr;</a></footer><script src="architecture-explorer.js" defer></script><script src="case-study.js" defer></script><script src="analytics.js" defer></script>
 </body>
 </html>

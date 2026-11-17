@@ -30,15 +30,16 @@
 <link rel="stylesheet" href="architecture.css">
 <link rel="stylesheet" href="audit-fixes.css">
 <link rel="stylesheet" href="case-navigation.css">
+<link rel="stylesheet" href="case-enhancements.css">
 <link rel="stylesheet" href="analytics.css">
 </head>
-<body>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
 <nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
 <a href="cloudops.html">CloudOps</a><a href="topologyx.html">TopologyX</a><a href="deployforge.html">DeployForge</a><a href="https://github.com/codebyaash/WealthCompass">GitHub &#8599;</a>
-</div></nav><main><header class="case-hero"><div class="case-kicker">Fintech + product engineering &middot; Case study 04</div>
+</div></nav><main id="main-content"><header class="case-hero"><div class="case-kicker">Fintech + product engineering &middot; Case study 04</div>
 <h1>WealthCompass</h1>
 <p>A free-first investment companion making risk, portfolios, financial goals and market context understandable for beginner investors.</p>
-<div class="case-actions"><a class="primary" href="https://github.com/codebyaash/WealthCompass">View source &#8599;</a></div></header><div class="case-metrics">
+<div class="case-actions"><a class="primary" href="https://github.com/codebyaash/WealthCompass">Repository &#8599;</a><a href="#evidence">Case study evidence &darr;</a></div></header><div class="case-metrics">
 <div>
 <strong>36</strong><span>Phases</span>
 </div>
@@ -58,8 +59,8 @@
 <div>
 <p>WealthCompass combines onboarding, risk profiling, education, portfolio tracking, multi-goal planning, market context and mentor guidance in a local-first workspace.</p>
 <pre class="flow">Profile &rarr; Risk score &rarr; Learning &rarr; Portfolio &rarr; Health rules &rarr; Goals &rarr; Market context &rarr; Mentor &rarr; Cloud sync</pre>
-</div></section><section class="case-section"><h2>Product flow</h2><div><p>Four primary product views show how the workspace moves from a single financial command center to portfolio detail, disciplined goal funding, and a portfolio-first market read.</p><div class="case-gallery"><img src="assets/projects/wealthcompass/wealthcompass-dashboard.png" alt="WealthCompass dashboard with investing-system posture, priority actions and key metrics" width="1600" height="1000" loading="lazy"><img src="assets/projects/wealthcompass/wealthcompass-portfolio.png" alt="WealthCompass portfolio tracker with holdings, import coverage and allocation guidance" width="1600" height="1000" loading="lazy"><img src="assets/projects/wealthcompass/wealthcompass-goals.png" alt="WealthCompass goal planning workspace with funding pressure and priorities" width="1600" height="1000" loading="lazy"><img src="assets/projects/wealthcompass/wealthcompass-market.png" alt="WealthCompass market view with sector context and a portfolio-first decision lens" width="1600" height="1000" loading="lazy"></div></div></section><section class="case-section"><h2>Architecture</h2>
-<div class="decision-grid"><figure class="architecture-frame"><img src="assets/projects/wealthcompass-architecture.svg" alt="WealthCompass architecture showing the Next.js workspace, domain rules, local state, Supabase and optional providers"><figcaption>Local-first product and integration architecture</figcaption></figure>
+</div></section><section class="case-section"><h2>Product flow</h2><div><p>Four primary product views show how the workspace moves from a single financial command center to portfolio detail, disciplined goal funding, and a portfolio-first market read.</p><div class="case-gallery"><img src="assets/projects/wealthcompass/wealthcompass-dashboard.webp" alt="WealthCompass dashboard with investing-system posture, priority actions and key metrics" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/wealthcompass/wealthcompass-portfolio.webp" alt="WealthCompass portfolio tracker with holdings, import coverage and allocation guidance" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/wealthcompass/wealthcompass-goals.webp" alt="WealthCompass goal planning workspace with funding pressure and priorities" width="1600" height="1000" loading="lazy" decoding="async"><img src="assets/projects/wealthcompass/wealthcompass-market.webp" alt="WealthCompass market view with sector context and a portfolio-first decision lens" width="1600" height="1000" loading="lazy" decoding="async"></div></div></section><section class="case-section"><h2>Architecture</h2>
+<div class="decision-grid"><div class="architecture-explorer" data-architecture="wealthcompass" aria-label="Interactive WealthCompass architecture"></div><noscript><figure class="architecture-frame static-architecture-fallback"><img src="assets/projects/wealthcompass-architecture.svg" alt="WealthCompass architecture showing the Next.js workspace, domain rules, local state, Supabase and optional providers"><figcaption>Local-first product and integration architecture</figcaption></figure></noscript>
 <article class="decision"><small>Application</small><h3>Next.js + TypeScript</h3>
 <p>Componentized dashboard workflows and route handlers.</p></article><article class="decision"><small>Data</small><h3>Local-first + Supabase</h3>
 <p>Useful without credentials, with authenticated cloud sync when configured.</p></article><article class="decision"><small>Intelligence</small><h3>Rules before AI</h3>
@@ -73,19 +74,20 @@
 <p>CSV and JSON import/export, statement review and transaction history reduce lock-in.</p>
 <h3>Defensive integration</h3>
 <p>Normalized inputs, mapping tests and sync states make external failures visible and recoverable.</p>
-</div></section><section class="case-section"><h2>Quality &amp; scope</h2>
-<div><ul>
-<li>Unit tests for scoring, goal math, import validation and exports</li>
-<li>CI runs install, lint, tests and production build</li>
-<li>Supabase mapping and workspace migration coverage</li>
-<li>Provider-aware statement review and scheduled sync foundation</li>
-</ul></div></section><section class="case-section"><h2>Next iteration</h2>
+</div></section><section class="case-section" id="evidence"><h2>Engineering evidence</h2><div><div class="evidence-grid">
+<article class="evidence-card"><small>Testing scope</small><strong>314 tests · 46 files</strong><p>Rules, imports, OAuth state, broker and inbox adapters, Supabase mapping, cloud sync and two Playwright journeys are represented.</p></article>
+<article class="evidence-card"><small>API surface</small><strong>19 route handlers</strong><p>Server boundaries cover risk, imports, market snapshots, mentor, broker connections, inbox connections and scheduled synchronization.</p></article>
+<article class="evidence-card"><small>Security controls</small><strong>Signed OAuth state</strong><p>HMAC-verified OAuth state, server-only provider secrets, Supabase authentication and RLS-ready data modeling constrain integration access.</p></article>
+<article class="evidence-card"><small>Reliability observation</small><strong>Local-first fallback</strong><p>Core portfolio, risk and goal workflows remain useful when cloud, market or AI providers are absent or unavailable.</p></article>
+<article class="evidence-card"><small>Architecture trade-off</small><strong>Resilience over simplicity</strong><p>Local and cloud modes reduce external dependency risk, but require explicit hydration, reconciliation and visible sync states.</p></article>
+<article class="evidence-card"><small>CI/CD checks</small><strong>4 quality gates</strong><p>GitHub Actions runs clean installation, linting, the test suite and a production Next.js build on pushes and pull requests.</p></article>
+</div><div class="workflow-compare"><div><small>Before</small><p>Risk, holdings, goals, education and market context are spread across tools that assume financial fluency.</p></div><span class="workflow-arrow" aria-hidden="true">&rarr;</span><div><small>After</small><p>A local-first workspace connects those decisions and selectively upgrades to authenticated integrations.</p></div></div></div></section><section class="case-section"><h2>Next iteration</h2>
 <div><ul>
 <li>Add interface screenshots and a public demo</li>
 <li>Expand end-to-end browser coverage</li>
 <li>Validate rules with qualified domain reviewers</li>
 <li>Security-review broker connections before implementation</li>
 </ul></div></section>
-<nav class="case-pagination" aria-label="Case study navigation"><a href="deployforge.html"><small>&larr; Previous project</small><strong>DeployForge</strong></a><a href="cloudops.html"><small>Next project &rarr;</small><strong>AI CloudOps Assistant</strong></a></nav></div></main><footer><span>&copy; Aashritha N</span><button type="button" class="analytics-preferences" data-analytics-preferences>Analytics preferences</button><a href="index.html#projects">Back to portfolio &uarr;</a></footer><script src="analytics.js"></script>
+<nav class="case-pagination" aria-label="Case study navigation"><a href="deployforge.html"><small>&larr; Previous project</small><strong>DeployForge</strong></a><a href="cloudops.html"><small>Next project &rarr;</small><strong>AI CloudOps Assistant</strong></a></nav></div></main><footer><span>&copy; Aashritha N</span><button type="button" class="analytics-preferences" data-analytics-preferences>Analytics preferences</button><a href="index.html#projects">Back to portfolio &uarr;</a></footer><script src="architecture-explorer.js" defer></script><script src="case-study.js" defer></script><script src="analytics.js" defer></script>
 </body>
 </html>
