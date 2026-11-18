@@ -1,0 +1,6 @@
+.credentials p{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px}
+.credentials p b{margin-right:0}
+.credentials p span{float:none;color:var(--muted);font:9px 'DM Mono';text-align:right;max-width:190px}
+.contact-meta{color:#899690!important;font:11px 'DM Mono'!important;margin-top:22px}
+.timeline article p{max-width:760px}
+@media(max-width:760px){.credentials p{grid-template-columns:42px 1fr}.credentials p span{grid-column:2;text-align:left;max-width:none}}

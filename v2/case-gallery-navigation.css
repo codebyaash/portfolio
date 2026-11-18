@@ -1,0 +1,72 @@
+.case-image-dialog {
+  width: min(1180px, 94vw);
+  max-width: none;
+  padding: 46px 64px 18px;
+}
+
+.case-image-dialog figure {
+  margin: 0;
+}
+
+.case-image-dialog figcaption {
+  margin-top: 10px;
+  color: #ccc8d6;
+  font-size: 12px;
+  text-align: center;
+}
+
+.case-image-dialog button {
+  border: 1px solid #ffffff2e;
+  border-radius: 999px;
+  background: #1d1d30;
+}
+
+.case-image-dialog .case-image-close {
+  right: 12px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+}
+
+.case-image-dialog .case-image-previous,
+.case-image-dialog .case-image-next {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+.case-image-dialog .case-image-previous {
+  right: auto;
+  left: 10px;
+}
+
+.case-image-dialog .case-image-next {
+  right: 10px;
+}
+
+.case-image-dialog .case-image-count {
+  margin: 10px 0 0 !important;
+  color: #aaa7b8 !important;
+  font: 9px 'DM Mono' !important;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .case-image-dialog {
+    width: 96vw;
+    padding: 52px 12px 60px;
+  }
+
+  .case-image-dialog .case-image-previous,
+  .case-image-dialog .case-image-next {
+    top: auto;
+    bottom: 10px;
+    transform: none;
+  }
+
+  .case-image-dialog .case-image-previous { left: calc(50% - 54px); }
+  .case-image-dialog .case-image-next { right: calc(50% - 54px); }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DeployForge case study: a simulation-first infrastructure deployment control plane by Aashritha N.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Aashritha N — Engineering Portfolio"><meta property="og:title" content="DeployForge — Platform Engineering Case Study"><meta property="og:description" content="IaC parsing, desired-state planning, policy checks, drift detection, cost visibility and rollback workflows."><meta property="og:url" content="https://codebyaash.github.io/portfolio/deployforge.html"><meta property="og:image" content="https://codebyaash.github.io/portfolio/assets/social/deployforge-og.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="DeployForge platform engineering case study by Aashritha N"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="DeployForge — Platform Engineering Case Study"><meta name="twitter:description" content="Simulation-first planning, policy, drift, cost, graph and rollback workflows."><meta name="twitter:image" content="https://codebyaash.github.io/portfolio/assets/social/deployforge-og.png">
+<title>DeployForge Case Study &mdash; Aashritha N</title>
+<link rel="canonical" href="https://codebyaash.github.io/portfolio/deployforge.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#171729">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "DeployForge — Platform Engineering Case Study",
+  "description": "A simulation-first infrastructure deployment control plane with planning, policy checks, drift detection, cost visibility and rollback workflows.",
+  "url": "https://codebyaash.github.io/portfolio/deployforge.html",
+  "mainEntityOfPage": "https://codebyaash.github.io/portfolio/deployforge.html",
+  "image": "https://codebyaash.github.io/portfolio/assets/social/deployforge-og.png",
+  "author": { "@type": "Person", "name": "Aashritha N", "url": "https://codebyaash.github.io/portfolio/" },
+  "keywords": ["Platform engineering", "Infrastructure as Code", "Terraform", "Azure", "FastAPI", "Next.js"],
+  "sameAs": ["https://github.com/codebyaash/IDP", "https://deployforge-eight.vercel.app"]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="architecture.css">
+<link rel="stylesheet" href="audit-fixes.css">
+<link rel="stylesheet" href="case-navigation.css">
+<link rel="stylesheet" href="case-enhancements.css">
+<link rel="stylesheet" href="case-gallery-navigation.css">
+<link rel="stylesheet" href="architecture-overview.css">
+<link rel="stylesheet" href="analytics.css">
+</head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="case-nav"><a href="index.html#projects">&larr; Aashritha N</a><div>
+<a href="cloudops.html">CloudOps</a><a href="topologyx.html">TopologyX</a><a href="wealthcompass.html">WealthCompass</a><a href="https://github.com/codebyaash/IDP">GitHub &#8599;</a>
+</div></nav><main id="main-content"><header class="case-hero"><div class="case-kicker">Platform engineering &middot; Case study 03</div>
+<h1>DeployForge</h1>
+<p>A simulation-first infrastructure deployment control plane that demonstrates enterprise cloud workflows without risky live provisioning.</p>
+<div class="case-actions">
+<a class="primary" href="https://deployforge-eight.vercel.app">Live demo &#8599;</a><a href="https://github.com/codebyaash/IDP">Repository &#8599;</a><a href="#evidence">Case study evidence &darr;</a>
+</div></header><div class="case-metrics">
+<div>
+<strong>4</strong><span>IaC formats</span>
+</div>
+<div>
+<strong>3</strong><span>Environments</span>
+</div>
+<div>
+<strong>13+</strong><span>Core API routes</span>
+</div>
+<div>
+<strong>4</strong><span>CI quality gates</span>
+</div>
+</div>
+<div class="case-body">
+<section class="case-section"><h2>The problem</h2>
+<div>
+<p>Live infrastructure platforms are expensive and unsafe to demonstrate. The project still needed to prove desired-state planning, policy enforcement, drift awareness, cost visibility, history and rollback judgment.</p>
+<div class="case-note">Constraint: preserve realistic control-plane behavior while making demos deterministic, safe and free.</div>
+</div></section><section class="case-section"><h2>The solution</h2>
+<div>
+<p>Users upload an IaC template, review parsed resources and proposed changes, run policy validation, simulate pipeline stages, and persist a new environment snapshot.</p>
+<pre class="flow">Upload &rarr; Parse &rarr; Validate &rarr; Compare state &rarr; Plan &rarr; Policy checks &rarr; Simulate &rarr; Persist &rarr; Graph &middot; Cost &middot; History &middot; Rollback</pre>
+</div></section><section class="case-section"><h2>Architecture</h2>
+<div class="decision-grid"><div class="architecture-explorer" data-architecture="deployforge" aria-label="Interactive DeployForge architecture"></div><noscript><figure class="architecture-frame static-architecture-fallback"><img src="assets/projects/deployforge/architecture.svg" alt="DeployForge architecture showing the dashboard, API control plane, database, simulation pipeline and CI delivery flow"><figcaption>System architecture and deployment simulation flow</figcaption></figure></noscript>
+<article class="decision"><small>Frontend</small><h3>Operational dashboard</h3>
+<p>Next.js, TypeScript, React Flow dependency graphs and Recharts cost views.</p></article><article class="decision"><small>Backend</small><h3>Control-plane API</h3>
+<p>FastAPI, Pydantic and SQLAlchemy with JWT-protected routes and Swagger.</p></article><article class="decision"><small>State</small><h3>Snapshot history</h3>
+<p>Alembic-managed relational data for deployments, resources and rollback events.</p></article><article class="decision"><small>Delivery</small><h3>Quality gates</h3>
+<p>GitHub Actions validates migrations, tests, frontend build and type safety.</p></article>
+</div></section><section class="case-section" id="evidence"><h2>Engineering evidence</h2><div><div class="evidence-grid">
+<article class="evidence-card"><small>Testing scope</small><strong>22 backend tests</strong><p>Coverage includes auth, organization isolation, validation, template parsing, planning, policy violations, deployment history, drift and rollback.</p></article>
+<article class="evidence-card"><small>API surface</small><strong>18 application routes</strong><p>Auth, profile, projects, templates, planning, deployments, resources, cost estimation and rollback are represented in the control-plane API.</p></article>
+<article class="evidence-card"><small>Security controls</small><strong>JWT + ownership</strong><p>Hashed credentials, JWT-protected routes, organization isolation, constrained CORS and startup rejection of unsafe production defaults.</p></article>
+<article class="evidence-card"><small>Reliability observation</small><strong>Snapshot rollback</strong><p>Desired state is compared with the latest stored deployment; rollback restores a previous resource snapshot without live cloud mutations.</p></article>
+<article class="evidence-card"><small>Architecture trade-off</small><strong>Simulation over provisioning</strong><p>Deterministic, free demonstrations improve safety and repeatability, but provider-specific apply behavior remains outside the current boundary.</p></article>
+<article class="evidence-card"><small>CI/CD checks</small><strong>4 delivery gates</strong><p>GitHub Actions runs an Alembic migration smoke test, pytest, the production frontend build, and TypeScript checking.</p></article>
+</div><div class="workflow-compare"><div><small>Before</small><p>IaC review requires live accounts or disconnected parsing, policy, cost and state tools.</p></div><span class="workflow-arrow" aria-hidden="true">&rarr;</span><div><small>After</small><p>One safe pipeline produces a plan, policy result, snapshot, graph, cost view and rollback history.</p></div></div></div></section><section class="case-section"><h2>Product evidence</h2>
+<div class="case-gallery">
+<img src="assets/projects/deployforge/overview-dashboard.webp" alt="DeployForge overview dashboard" width="1600" height="907" loading="lazy" decoding="async"><img src="assets/projects/deployforge/upload-plan.webp" alt="DeployForge upload and plan" width="1600" height="905" loading="lazy" decoding="async"><img src="assets/projects/deployforge/resource-graph.webp" alt="DeployForge resource graph" width="1600" height="946" loading="lazy" decoding="async">
+</div></section><section class="case-section"><h2>Next iteration</h2>
+<div><ul>
+<li>GitHub raw URL template import</li>
+<li>Playwright coverage for dashboard journeys</li>
+<li>Richer Terraform and Bicep expression support</li>
+<li>Optional provider adapter for real deployments</li>
+</ul></div></section>
+<nav class="case-pagination" aria-label="Case study navigation"><a href="topologyx.html"><small>&larr; Previous project</small><strong>TopologyX</strong></a><a href="wealthcompass.html"><small>Next project &rarr;</small><strong>WealthCompass</strong></a></nav></div></main><footer><span>&copy; Aashritha N</span><button type="button" class="analytics-preferences" data-analytics-preferences>Analytics preferences</button><a href="index.html#projects">Back to portfolio &uarr;</a></footer><script src="architecture-explorer.js" defer></script><script src="case-study.js" defer></script><script src="analytics.js" defer></script>
+</body>
+</html>

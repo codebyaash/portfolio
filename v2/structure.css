@@ -1,0 +1,19 @@
+/* Structural patterns inspired by the supplied reference; visual identity stays original. */
+header{padding-left:max(24px,calc((100vw - 1180px)/2));padding-right:max(24px,calc((100vw - 1180px)/2))}
+.hero,section:not(.hero){width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.hero{grid-template-columns:1.05fr .95fr;gap:clamp(42px,6vw,75px)}
+.hero-socials{display:flex;gap:12px;margin-top:28px}
+.hero-socials a{width:40px;height:40px;border:1px solid #ffffff38;border-radius:50%;display:grid;place-items:center;text-decoration:none;font:10px 'DM Mono';color:#ff9a8c;transition:transform .22s,border-color .22s,background .22s}
+.hero-socials a:hover{transform:translateY(-4px);border-color:#b8afff;background:#ffffff0c}
+section:not(.hero)>label{width:max-content;margin-left:auto;margin-right:auto;position:relative}
+section:not(.hero)>label:before,section:not(.hero)>label:after{content:"";position:absolute;top:50%;width:65px;height:1px;background:currentColor;opacity:.25}
+section:not(.hero)>label:before{right:calc(100% + 18px)}section:not(.hero)>label:after{left:calc(100% + 18px)}
+#experience .cols{grid-template-columns:.68fr 1.32fr}
+.timeline article{border:1px solid #ffffff20;border-radius:10px;padding:28px;margin-bottom:18px;background:#ffffff05}
+.timeline article:first-child{border-top:1px solid #ffffff20}
+.skill-grid article,.projects article,.credential-cards article{border-radius:10px}
+.actions a{border-radius:999px;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
+#credentials,.contact{width:100%;max-width:none;margin:0;padding-left:max(24px,calc((100vw - 1180px)/2));padding-right:max(24px,calc((100vw - 1180px)/2))}
+#credentials>.credential,#credentials>.credential-cards{max-width:1180px;margin-inline:auto}
+@media(max-width:900px){.hero,#experience .cols{grid-template-columns:1fr}.terminal{max-width:620px}.skill-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.hero,section:not(.hero){width:calc(100% - 36px)}.skill-grid{grid-template-columns:1fr}.hero-socials{margin-top:22px}section:not(.hero)>label:before,section:not(.hero)>label:after{width:32px}.contact{width:100%!important}}
